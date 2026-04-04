@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Responsive breakpoints */
+@theme {
+    --breakpoint-2xxl: 160rem;
+    --breakpoint-3xl: 220rem;
+}
+/* End Responsive breakpoints */
