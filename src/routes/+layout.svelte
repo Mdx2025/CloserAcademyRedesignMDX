@@ -1,10 +1,8 @@
 <script>
 	import '../app.css';
 	import '@tailwindplus/elements';
-	import { onMount } from 'svelte';
-	import { afterNavigate, disableScrollHandling } from '$app/navigation';
+	import { afterNavigate } from '$app/navigation';
 	import { get } from 'svelte/store';
-	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	// Components
@@ -21,11 +19,6 @@
 		setTimeout(() => {
 			ScrollTrigger.refresh(true);
 		}, 150);
-	});
-	
-	onMount(() => {
-		// Lenis gestiona el scroll; desactivar el de SvelteKit
-		// disableScrollHandling();
 	});
 </script>
 
