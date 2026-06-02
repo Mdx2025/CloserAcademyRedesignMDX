@@ -1,58 +1,68 @@
-# Svelte library
+# started-sveltekit
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+Opinionated SvelteKit starter for landings and visual-heavy sites at MDX.
+Comes pre-wired with smooth scroll, scroll-driven animations, a carousel
+library, and the Tailwind Plus elements collection — so a new project
+can focus on the actual design instead of plumbing.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Stack
 
-## Creating a project
+- **SvelteKit 2** + **Svelte 5** (runes-ready)
+- **Vite 8**
+- **adapter-node** for SSR deploys behind nginx / Dokploy / systemd
+- **Tailwind CSS 4** via the `@tailwindcss/vite` plugin
+- **`@tailwindplus/elements`** — Headless UI custom elements
+- **Lenis** for smooth scroll, wired to the **GSAP** ticker so
+  `ScrollTrigger` and Lenis share a single animation loop
+- **Swiper** ready to import for carousels
 
-If you're seeing this, you've probably already done this step. Congrats!
+The project is plain JavaScript with JSDoc — no TypeScript.
 
-```sh
-# create a new project in the current directory
-npx sv create
+## Requirements
 
-# create a new project in my-app
-npx sv create my-app
-```
+- Node ≥ 20
+- **pnpm** 11 (pinned via `packageManager`)
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
+## Scripts
 
 ```sh
-npm pack
+pnpm install
+pnpm dev               # vite dev — http://localhost:5173
+pnpm build             # production build into ./build
+pnpm start             # node build/index.js (after build)
+pnpm preview           # vite preview of the built bundle
 ```
 
-To create a production version of your showcase app:
+## What's already wired
 
-```sh
-npm run build
+- `src/lib/lenis.svelte` — Lenis initialisation, GSAP `ticker` sync, and
+  anchor link handler (`a[href^="#"]` → `lenis.scrollTo`).
+- `src/lib/lenis-store.js` — `writable` store exposing the live Lenis
+  instance so any component can call `scrollTo` programmatically.
+- `src/routes/+layout.svelte` — mounts `<Lenis />`, runs
+  `ScrollTrigger.refresh(true)` after every navigation, and snaps scroll
+  back to the top.
+- `src/app.css` — Tailwind import + two extra `@theme` breakpoints
+  (`--breakpoint-2xxl: 160rem`, `--breakpoint-3xl: 220rem`) for
+  ultra-wide displays.
+
+## Project layout
+
+```
+src/
+├── app.css            ← Tailwind import + custom breakpoints
+├── app.html           ← shell, preloads navigations on hover
+├── lib/
+│   ├── index.js       ← reusable component re-exports (empty by default)
+│   ├── lenis.svelte   ← Lenis + GSAP ScrollTrigger bootstrap
+│   └── lenis-store.js ← writable store with the active Lenis instance
+└── routes/
+    ├── +layout.svelte ← global shell, navigation hooks
+    └── +page.svelte   ← demo page, replace with the real one
 ```
 
-You can preview the production build with `npm run preview`.
+## Deploy
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```sh
-npm publish
-```
+Build outputs a self-contained Node server in `./build`. Drop it on any
+host that can run `node build/index.js`. We typically ship it behind
+nginx as a systemd service.
