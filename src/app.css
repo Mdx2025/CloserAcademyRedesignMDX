@@ -5,33 +5,91 @@
 @theme {
   --font-sans: 'Inter', sans-serif;
 
-  /* Palette */
+  /* ── Palette ── */
+
+  /* Backgrounds */
   --color-bgmain: #E8F0F7;
+  --color-surface: #fefeff;
+  --color-calendarbg: #DEE8F1;
+  --color-togbg: #D6E6F2;
+  --color-divider: #d6e2e8;
+  --color-border: #e2e5e7;
+
+  /* Text */
   --color-textdark: #1E293B;
+  --color-textprimary: #001119;
   --color-textmuted: #64748B;
+  --color-textmuted2: #696969;
+
+  /* Blues */
   --color-blueaccent: #0A74B2;
+  --color-primaryblue: #006692;
+  --color-secondaryblue: #1497df;
   --color-stat1: #065992;
   --color-stat2: #157FB5;
   --color-stat3: #1DA0DB;
-  --color-calendarbg: #DEE8F1;
-  --color-togbg: #D6E6F2;
   --color-togactive: #0E7CB7;
-  --color-event-pink: #E7A9F5;
-  --color-event-green: #A3E596;
-  --color-event-blue: #6BBDEB;
   --color-heading-blue: #096297;
   --color-link-blue: #0CA5E9;
   --color-link-blue-hover: #0274B3;
   --color-cal-highlight: #1A8DCC;
 
-  /* Shadows */
-  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  /* Event colors */
+  --color-event-pink: #E7A9F5;
+  --color-event-pink-accent: #db5aee;
+  --color-event-pink-light: #db94e8;
+  --color-event-green: #A3E596;
+  --color-event-green-accent: #71c23b;
+  --color-event-blue: #6BBDEB;
 
-  /* Radius */
+  /* ── Typography Scale ── */
+  --text-2xs: 10px;
+  --text-2xs--line-height: 14px;
+  --text-xs-figma: 13px;
+  --text-xs-figma--line-height: 18px;
+  --text-sm-figma: 14px;
+  --text-sm-figma--line-height: 20px;
+  --text-base-figma: 15px;
+  --text-base-figma--line-height: 22px;
+  --text-md: 16px;
+  --text-md--line-height: 24px;
+  --text-lg-figma: 18px;
+  --text-lg-figma--line-height: 26px;
+  --text-xl-figma: 20px;
+  --text-xl-figma--line-height: 28px;
+  --text-2xl-figma: 22px;
+  --text-2xl-figma--line-height: 30px;
+  --text-3xl-figma: 30px;
+  --text-3xl-figma--line-height: 36px;
+  --text-4xl-figma: 32px;
+  --text-4xl-figma--line-height: 40px;
+  --text-5xl-figma: 40px;
+  --text-5xl-figma--line-height: 48px;
+  --text-6xl-figma: 52px;
+  --text-6xl-figma--line-height: 58px;
+
+  /* ── Shadows ── */
+  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  --shadow-figma-soft: 0 0 35.6px 4px rgba(16, 24, 32, 0.08);
+  --shadow-blue-soft: 0 0 35.6px 4px rgba(0, 102, 146, 0.1);
+  --shadow-blue-medium: 0 0 30.6px rgba(0, 102, 146, 0.15);
+  --shadow-card: 0 0 49.9px -8px rgba(0, 102, 146, 0.15);
+  --shadow-highlight: 0 0 23.6px rgba(38, 67, 95, 0.24);
+
+  /* ── Border Radius ── */
+  --radius-xs: 5px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 17px;
+  --radius-xl: 20px;
+  --radius-2xl: 23px;
+  --radius-3xl: 25px;
+  --radius-4xl: 29px;
   --radius-card: 24px;
   --radius-card-lg: 32px;
+  --radius-full: 100px;
 
-  /* Breakpoints */
+  /* ── Breakpoints ── */
   --breakpoint-2xxl: 160rem;
   --breakpoint-3xl: 220rem;
 }
@@ -61,9 +119,14 @@ body {
 /* ─── Calendar background ─── */
 .calendar-bg { background-color: var(--color-calendarbg); }
 
-/* ─── Shadows ─── */
+/* ─── Shadow utilities ─── */
 .shadow-soft { box-shadow: var(--shadow-soft); }
 .shadow-inner-soft { box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02); }
+.shadow-figma-soft { box-shadow: var(--shadow-figma-soft); }
+.shadow-blue-soft { box-shadow: var(--shadow-blue-soft); }
+.shadow-blue-medium { box-shadow: var(--shadow-blue-medium); }
+.shadow-card { box-shadow: var(--shadow-card); }
+.shadow-highlight { box-shadow: var(--shadow-highlight); }
 
 /* ─── Schedule line (horizontal rule after time label) ─── */
 .schedule-line {
