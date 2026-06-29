@@ -1,8 +1,121 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* Responsive breakpoints */
+/* ─── Design Tokens (Tailwind v4 @theme) ─── */
 @theme {
-    --breakpoint-2xxl: 160rem;
-    --breakpoint-3xl: 220rem;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Palette */
+  --color-bgmain: #E8F0F7;
+  --color-textdark: #1E293B;
+  --color-textmuted: #64748B;
+  --color-blueaccent: #0A74B2;
+  --color-stat1: #065992;
+  --color-stat2: #157FB5;
+  --color-stat3: #1DA0DB;
+  --color-calendarbg: #DEE8F1;
+  --color-togbg: #D6E6F2;
+  --color-togactive: #0E7CB7;
+  --color-event-pink: #E7A9F5;
+  --color-event-green: #A3E596;
+  --color-event-blue: #6BBDEB;
+  --color-heading-blue: #096297;
+  --color-link-blue: #0CA5E9;
+  --color-link-blue-hover: #0274B3;
+  --color-cal-highlight: #1A8DCC;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+
+  /* Radius */
+  --radius-card: 24px;
+  --radius-card-lg: 32px;
+
+  /* Breakpoints */
+  --breakpoint-2xxl: 160rem;
+  --breakpoint-3xl: 220rem;
 }
-/* End Responsive breakpoints */
+
+/* ─── Global resets ─── */
+::-webkit-scrollbar { display: none; }
+* { -ms-overflow-style: none; scrollbar-width: none; }
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* ─── Gradient utilities ─── */
+.bg-gradient-active {
+  background: linear-gradient(90deg, #07629E 0%, #1DA0DB 100%);
+}
+
+.interviews-bg {
+  background: linear-gradient(180deg, #033E6A 0%, #064576 100%);
+}
+
+/* ─── Stat card backgrounds ─── */
+.stat-card-1 { background-color: var(--color-stat1); }
+.stat-card-2 { background-color: var(--color-stat2); }
+.stat-card-3 { background-color: var(--color-stat3); }
+
+/* ─── Calendar background ─── */
+.calendar-bg { background-color: var(--color-calendarbg); }
+
+/* ─── Shadows ─── */
+.shadow-soft { box-shadow: var(--shadow-soft); }
+.shadow-inner-soft { box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02); }
+
+/* ─── Schedule line (horizontal rule after time label) ─── */
+.schedule-line {
+  position: relative;
+}
+.schedule-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  right: 0;
+  height: 1px;
+  background-color: #E2E8F0;
+  z-index: 1;
+}
+
+/* ─── Event blocks (absolute within schedule) ─── */
+.event-block {
+  position: absolute;
+  left: 180px;
+  border-radius: 12px;
+  padding: 12px 16px;
+  z-index: 10;
+  width: 320px;
+}
+
+/* Event color variants */
+.event-pink {
+  background-color: var(--color-event-pink);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(231, 169, 245, 0.4);
+}
+.event-green {
+  background-color: var(--color-event-green);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(163, 229, 150, 0.4);
+}
+.event-blue {
+  background-color: var(--color-event-blue);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(107, 189, 235, 0.4);
+}
+
+/* Event time text */
+.event-pink .time,
+.event-green .time,
+.event-blue .time {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
