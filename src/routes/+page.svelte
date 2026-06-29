@@ -22,20 +22,16 @@
 	} from '$lib/data/dashboard.js';
 </script>
 
-<!-- 1920 x 1080 FIXED CANVAS -->
-<div
-	class="w-[1920px] h-[1080px] bg-bgmain relative overflow-hidden flex"
-	style="box-shadow: 0 0 50px rgba(0,0,0,0.5); transform-origin: center center;"
->
+<div class="w-full h-dvh bg-bgmain relative overflow-hidden flex">
 
 	<!-- LEFT SIDEBAR (280px) -->
 	<SidebarNav active="Dashboard" />
 
 	<!-- MAIN CONTENT -->
-	<div class="flex-1 flex flex-col h-full pt-10 pl-10 pr-[50px] pb-10 z-10 overflow-y-auto">
+	<div class="flex-1 flex flex-col h-full pt-8 pl-8 pr-10 pb-6 z-10 overflow-hidden">
 
 		<!-- HEADER -->
-		<header class="flex justify-between items-center mb-10 w-full">
+		<header class="flex justify-between items-center mb-6 w-full shrink-0">
 			<div class="flex flex-col">
 				<h1 class="text-[22px] font-bold text-textprimary tracking-tight leading-tight">Hello, MDX Agency</h1>
 				<p class="text-[14px] font-bold text-primaryblue mt-1">Monday, 25 August 2024.</p>
@@ -64,17 +60,17 @@
 		</header>
 
 		<!-- DASHBOARD GRID -->
-		<div class="flex-1 flex gap-8 w-full h-[calc(100%-100px)]">
+		<div class="flex-1 flex gap-6 w-full min-h-0">
 
 			<!-- LEFT COLUMN: My Applications (460px) -->
-			<div class="w-[460px] h-full flex flex-col shrink-0">
-				<div class="mb-6">
+			<div class="w-[30%] max-w-[480px] min-w-[350px] h-full flex flex-col shrink-0">
+				<div class="mb-4 shrink-0">
 					<h2 class="text-[30px] font-bold text-heading-blue tracking-tight">My Applications</h2>
 					<p class="text-[14px] font-bold text-[rgba(0,17,25,0.43)] mt-1">Lorem ipsum dolor et same</p>
 				</div>
 
 				<!-- Cards Container (scrollable) -->
-				<div class="flex flex-col gap-5 overflow-y-auto pb-4 flex-1">
+				<div class="flex flex-col gap-4 overflow-y-auto pb-2 flex-1 min-h-0">
 					{#each applicationCards as card, i}
 						<ApplicationCard
 							title={card.title}
@@ -89,10 +85,10 @@
 			</div>
 
 			<!-- RIGHT COLUMN: Metrics + Calendar + Schedule -->
-			<div class="flex-1 flex flex-col gap-6 h-full min-w-0">
+			<div class="flex-1 flex flex-col gap-4 h-full min-w-0">
 
-				<!-- TOP METRICS ROW (150px) -->
-				<div class="flex gap-6 h-[150px] shrink-0">
+				<!-- TOP METRICS ROW -->
+				<div class="flex gap-4 h-[140px] shrink-0">
 
 					<ProfileCard />
 
@@ -119,10 +115,10 @@
 				</div>
 
 				<!-- BOTTOM ROW (Calendar + Upcoming + Schedule) -->
-				<div class="flex gap-6 flex-1 min-h-0">
+				<div class="flex gap-4 flex-1 min-h-0">
 
-					<!-- Calendar & Interviews Column (360px) -->
-					<div class="w-[360px] flex flex-col gap-6 shrink-0 h-full">
+					<!-- Calendar & Interviews Column -->
+					<div class="w-[340px] flex flex-col gap-4 shrink-0 h-full">
 
 						<CalendarWidget />
 
@@ -153,7 +149,7 @@
 					<div class="flex-1 bg-surface rounded-[25px] p-8 shadow-[0px_0px_37.5px_0px_rgba(0,102,146,0.08)] flex flex-col relative h-full overflow-hidden">
 
 						<!-- Header -->
-						<div class="flex justify-between items-center mb-8 shrink-0 relative z-20">
+						<div class="flex justify-between items-center mb-6 shrink-0 relative z-20">
 							<div class="flex items-center gap-6">
 								<h3 class="text-[20px] font-bold text-textprimary">13 - 20 July 2024</h3>
 								<div class="flex items-center gap-3">

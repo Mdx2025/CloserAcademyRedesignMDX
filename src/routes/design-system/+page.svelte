@@ -100,23 +100,29 @@
 	];
 </script>
 
-<div class="min-h-screen bg-white">
+<div class="w-full h-dvh bg-bgmain flex overflow-hidden">
 
-	<!-- Page Header -->
-	<div class="border-b border-gray-200 bg-white sticky top-0 z-50">
-		<div class="max-w-[1400px] mx-auto px-10 py-6 flex items-center justify-between">
-			<div>
-				<h1 class="text-[32px] font-bold text-textdark tracking-tight">Design System</h1>
-				<p class="text-[14px] text-textmuted mt-1">Sales Talents Dashboard — Tokens, Components & Variants</p>
+	<!-- LEFT SIDEBAR -->
+	<SidebarNav active="" />
+
+	<!-- MAIN CONTENT -->
+	<div class="flex-1 flex flex-col h-full overflow-hidden">
+
+		<!-- Page Header -->
+		<div class="border-b border-gray-200/50 bg-white/80 backdrop-blur-md shrink-0 z-50">
+			<div class="px-10 py-5 flex items-center justify-between">
+				<div>
+					<h1 class="text-[22px] font-bold text-textprimary tracking-tight">Design System</h1>
+					<p class="text-[14px] text-textmuted mt-1">Tokens, Components & Variants</p>
+				</div>
+				<a href="/" class="text-[14px] font-semibold text-link-blue hover:text-link-blue-hover flex items-center gap-1.5">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+					Back to Dashboard
+				</a>
 			</div>
-			<a href="/" class="text-[14px] font-semibold text-link-blue hover:text-link-blue-hover flex items-center gap-1.5">
-				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-				Back to Dashboard
-			</a>
 		</div>
-	</div>
 
-	<div class="max-w-[1400px] mx-auto px-10 py-12 flex flex-col gap-20">
+		<div class="flex-1 overflow-y-auto px-10 py-10 flex flex-col gap-20">
 
 		<!-- ════════════════════════════════════════════
 		     SECTION: Colors
@@ -452,13 +458,14 @@
 				</div>
 			</div>
 		</section>
-	</div>
 
-	<!-- Footer -->
-	<div class="border-t border-gray-200 mt-20">
-		<div class="max-w-[1400px] mx-auto px-10 py-8 flex justify-between items-center">
-			<p class="text-[13px] text-textmuted">Sales Talents Design System</p>
-			<a href="/" class="text-[13px] font-semibold text-link-blue hover:text-link-blue-hover">Back to Dashboard</a>
+		<!-- Footer -->
+		<div class="border-t border-gray-200/50 mt-10 shrink-0">
+			<div class="py-6 flex justify-between items-center">
+				<p class="text-[13px] text-textmuted">Sales Talents Design System</p>
+				<a href="/" class="text-[13px] font-semibold text-link-blue hover:text-link-blue-hover">Back to Dashboard</a>
+			</div>
 		</div>
+	</div>
 	</div>
 </div>
