@@ -11,12 +11,12 @@
 	} = $props();
 </script>
 
-<div class="calendar-bg rounded-[32px] p-6 shadow-soft shrink-0">
+<div class="bg-[#d5e5ec] rounded-[25px] p-6 shadow-blue-soft shrink-0">
 	<div class="flex items-center justify-center gap-4 mb-6">
 		<button class="text-textdark hover:text-black">
 			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
 		</button>
-		<h3 class="text-[18px] font-bold text-textdark">{month} {year}</h3>
+		<h3 class="text-[18px] font-bold text-textprimary">{month} {year}</h3>
 		<button class="text-textdark hover:text-black">
 			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
 		</button>

@@ -3,7 +3,7 @@
 	let { title, subtitle, description, location, type, linkText, linkHref = '/' } = $props();
 </script>
 
-<div class="bg-white rounded-[24px] p-6 shadow-soft relative border border-gray-100/50 hover:-translate-y-1 transition-transform duration-300">
+<div class="bg-white rounded-[25px] p-6 shadow-figma-soft relative hover:-translate-y-1 transition-transform duration-300">
 	<!-- More button -->
 	<button class="absolute top-6 right-5 text-gray-400 hover:text-gray-600">
 		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>

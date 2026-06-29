@@ -2,7 +2,7 @@
 	let mode = $state('light');
 </script>
 
-<div class="flex items-center bg-togbg rounded-full p-1 shadow-inner-soft">
+<div class="flex items-center bg-[rgba(254,254,255,0.5)] backdrop-blur-[14.8px] rounded-full p-1 shadow-blue-medium">
 	<button
 		class="w-10 h-10 rounded-full flex items-center justify-center transition-colors"
 		class:bg-togactive={mode === 'light'}

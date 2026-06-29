@@ -10,6 +10,6 @@
 	<input
 		type="text"
 		{placeholder}
-		class="w-full bg-white rounded-full py-4 pl-12 pr-6 text-[15px] font-medium text-gray-700 outline-none shadow-sm placeholder-gray-400"
+		class="w-full bg-surface backdrop-blur-[5px] rounded-full py-4 pl-12 pr-6 text-[14px] font-bold text-[rgba(0,17,25,0.66)] outline-none shadow-blue-medium placeholder-[rgba(0,17,25,0.66)]"
 	/>
 </div>

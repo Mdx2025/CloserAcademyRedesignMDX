@@ -37,8 +37,8 @@
 		<!-- HEADER -->
 		<header class="flex justify-between items-center mb-10 w-full">
 			<div class="flex flex-col">
-				<h1 class="text-[32px] font-semibold text-textdark tracking-tight leading-tight">Hello, MDX Agency</h1>
-				<p class="text-[14px] font-medium text-blueaccent mt-1">Monday, 25 August 2024.</p>
+				<h1 class="text-[22px] font-bold text-textprimary tracking-tight leading-tight">Hello, MDX Agency</h1>
+				<p class="text-[14px] font-bold text-primaryblue mt-1">Monday, 25 August 2024.</p>
 			</div>
 
 			<!-- Search & Controls -->
@@ -50,7 +50,7 @@
 					<ThemeToggle />
 
 					<!-- Notification -->
-					<button class="w-12 h-12 rounded-full bg-togbg flex items-center justify-center text-gray-600 relative">
+					<button class="w-12 h-12 rounded-full bg-[rgba(0,17,25,0.07)] flex items-center justify-center text-textprimary relative">
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
 						<div class="absolute top-3 right-3.5 w-2 h-2 rounded-full bg-red-500"></div>
 					</button>
@@ -69,8 +69,8 @@
 			<!-- LEFT COLUMN: My Applications (460px) -->
 			<div class="w-[460px] h-full flex flex-col shrink-0">
 				<div class="mb-6">
-					<h2 class="text-[30px] font-semibold text-heading-blue tracking-tight">My Applications</h2>
-					<p class="text-[14px] text-gray-500 mt-1">Lorem ipsum dolor et same</p>
+					<h2 class="text-[30px] font-bold text-heading-blue tracking-tight">My Applications</h2>
+					<p class="text-[14px] font-bold text-[rgba(0,17,25,0.43)] mt-1">Lorem ipsum dolor et same</p>
 				</div>
 
 				<!-- Cards Container (scrollable) -->
@@ -127,7 +127,7 @@
 						<CalendarWidget />
 
 						<!-- Upcoming Interviews -->
-						<div class="interviews-bg rounded-[32px] p-6 flex-1 flex flex-col shadow-soft relative overflow-hidden">
+						<div class="interviews-bg rounded-[25px] p-6 flex-1 flex flex-col shadow-card relative overflow-hidden">
 							<div class="flex justify-between items-center mb-6">
 								<h3 class="text-[20px] font-semibold text-white tracking-tight">Upcoming interviews</h3>
 								<button class="text-white/60 hover:text-white pb-2">
@@ -150,12 +150,12 @@
 					</div>
 
 					<!-- DAILY SCHEDULE BLOCK -->
-					<div class="flex-1 bg-white rounded-[32px] p-8 shadow-soft flex flex-col relative h-full overflow-hidden border border-gray-100/50">
+					<div class="flex-1 bg-surface rounded-[25px] p-8 shadow-[0px_0px_37.5px_0px_rgba(0,102,146,0.08)] flex flex-col relative h-full overflow-hidden">
 
 						<!-- Header -->
 						<div class="flex justify-between items-center mb-8 shrink-0 relative z-20">
 							<div class="flex items-center gap-6">
-								<h3 class="text-[22px] font-bold text-textdark">13 - 20 July 2024</h3>
+								<h3 class="text-[20px] font-bold text-textprimary">13 - 20 July 2024</h3>
 								<div class="flex items-center gap-3">
 									<span class="text-[14px] font-semibold text-link-blue cursor-pointer hover:underline">Today</span>
 									<button class="text-gray-400 hover:text-gray-700">

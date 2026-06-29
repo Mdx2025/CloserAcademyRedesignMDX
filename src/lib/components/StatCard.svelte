@@ -9,14 +9,14 @@
 	};
 </script>
 
-<div class="{variantClass[variant]} rounded-[32px] p-7 text-white flex flex-col justify-between shadow-soft relative overflow-hidden flex-1">
+<div class="{variantClass[variant]} rounded-[25px] p-7 text-white flex flex-col justify-between shadow-blue-soft relative overflow-hidden flex-1">
 	<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center absolute top-6 left-6">
 		{#if children}
 			{@render children()}
 		{/if}
 	</div>
 	<div class="mt-auto">
-		<h2 class="text-[52px] font-bold leading-none tracking-tight">{value}</h2>
-		<p class="text-[15px] text-white/80 font-medium mt-1">{label}</p>
+		<h2 class="text-[40px] font-bold leading-none tracking-tight">{value}</h2>
+		<p class="text-[14px] text-white/80 font-medium mt-1">{label}</p>
 	</div>
 </div>
