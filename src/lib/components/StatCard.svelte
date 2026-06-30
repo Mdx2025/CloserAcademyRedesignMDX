@@ -9,7 +9,7 @@
 	};
 </script>
 
-<div class="{variantClass[variant]} rounded-[25px] p-7 text-white flex flex-col justify-between shadow-blue-soft relative overflow-hidden flex-1">
+<div class="{variantClass[variant]} rounded-[25px] p-7 text-white flex flex-col justify-between relative overflow-hidden flex-1">
 	<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center absolute top-6 left-6">
 		{#if children}
 			{@render children()}

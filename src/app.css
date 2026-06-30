@@ -112,9 +112,18 @@ body {
 }
 
 /* ─── Stat card backgrounds ─── */
-.stat-card-1 { background-color: var(--color-stat1); }
-.stat-card-2 { background-color: var(--color-stat2); }
-.stat-card-3 { background-color: var(--color-stat3); }
+.stat-card-1 {
+  background: linear-gradient(236deg, #0269AD 4.97%, #004075 95.25%);
+  box-shadow: 0 0 23.6px 0 rgba(38, 67, 95, 0.24);
+}
+.stat-card-2 {
+  background: linear-gradient(304deg, #34A3D3 11.1%, #006692 95.11%);
+  box-shadow: 0 0 23.6px 0 rgba(38, 67, 95, 0.24);
+}
+.stat-card-3 {
+  background: linear-gradient(302deg, #1497DF 8.15%, #156794 100.55%);
+  box-shadow: 0 0 23.6px 0 rgba(38, 67, 95, 0.24);
+}
 
 /* ─── Calendar background ─── */
 .calendar-bg { background-color: var(--color-calendarbg); }

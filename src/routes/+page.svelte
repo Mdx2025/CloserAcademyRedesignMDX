@@ -63,14 +63,24 @@
 		<div class="flex-1 flex gap-6 w-full min-h-0">
 
 			<!-- LEFT COLUMN: My Applications (460px) -->
-			<div class="w-[30%] max-w-[480px] min-w-[350px] h-full flex flex-col shrink-0">
-				<div class="mb-4 shrink-0">
+			<div class="w-[30%] max-w-[480px] min-w-[350px] h-full flex flex-col shrink-0 rounded-[30px] p-6 relative overflow-hidden" style="background: rgba(249, 249, 249, 0.20); box-shadow: 0 0 49.9px -8px rgba(0, 102, 146, 0.15);">
+				<!-- SVG filter blur (replaces backdrop-filter) -->
+				<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
+					<defs>
+						<filter id="apps-panel-blur" x="-10%" y="-10%" width="120%" height="120%">
+							<feGaussianBlur in="BackgroundImage" stdDeviation="5" />
+						</filter>
+					</defs>
+					<rect width="100%" height="100%" fill="rgba(249, 249, 249, 0.20)" filter="url(#apps-panel-blur)" rx="30" />
+				</svg>
+
+				<div class="mb-4 shrink-0 relative z-10">
 					<h2 class="text-[30px] font-bold text-heading-blue tracking-tight">My Applications</h2>
 					<p class="text-[14px] font-bold text-[rgba(0,17,25,0.43)] mt-1">Lorem ipsum dolor et same</p>
 				</div>
 
 				<!-- Cards Container (scrollable) -->
-				<div class="flex flex-col gap-4 overflow-y-auto pb-2 flex-1 min-h-0">
+				<div class="flex flex-col gap-4 overflow-y-auto pb-2 flex-1 min-h-0 relative z-10">
 					{#each applicationCards as card, i}
 						<ApplicationCard
 							title={card.title}
