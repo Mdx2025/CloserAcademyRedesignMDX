@@ -28,7 +28,7 @@
 	<SidebarNav active="Dashboard" />
 
 	<!-- MAIN CONTENT -->
-	<div class="flex-1 flex flex-col h-full pt-8 pl-2 pr-10 pb-6 z-10 overflow-hidden">
+	<div class="flex-1 flex flex-col h-full pt-8 pl-2 pr-10 pb-6 z-10 min-h-0">
 
 		<!-- HEADER -->
 		<header class="flex justify-between items-center mb-6 w-full shrink-0">
@@ -73,7 +73,7 @@
 					<rect width="100%" height="100%" fill="rgba(249, 249, 249, 0.20)" filter="url(#apps-panel-blur)" rx="30" />
 				</svg>
 
-				<div class="mb-4 shrink-0 relative z-10">
+				<div class="px-6 pb-8 mt-4 shrink-0 relative z-10">
 					<h2 class="text-[30px] font-bold text-heading-blue tracking-tight">My Applications</h2>
 					<p class="text-[14px] font-bold text-[rgba(0,17,25,0.43)] mt-1">Lorem ipsum dolor et same</p>
 				</div>
