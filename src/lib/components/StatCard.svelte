@@ -9,14 +9,13 @@
 	};
 </script>
 
-<div class="{variantClass[variant]} rounded-[25px] p-7 text-white flex flex-col justify-between relative overflow-hidden flex-1 min-w-[188px] min-h-[155px]">
-	<div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center absolute top-6 left-6">
+<div class="w-48 h-40 relative flex-1 min-w-[188px]">
+	<div class="{variantClass[variant]} w-full h-full left-0 top-0 absolute rounded-3xl"></div>
+	<div class="left-[29px] top-[71px] absolute text-zinc-200 text-4xl font-normal">{value}</div>
+	<div class="left-[29px] top-[120px] absolute text-zinc-200/70 text-sm font-normal">{label}</div>
+	<div class="size-9 left-[29px] top-[16px] absolute bg-white/20 rounded-full shadow-[0px_0px_21.9px_0px_rgba(3,110,71,0.20)] flex items-center justify-center">
 		{#if children}
 			{@render children()}
 		{/if}
-	</div>
-	<div class="mt-auto">
-		<h2 class="text-[40px] font-bold leading-none tracking-tight">{value}</h2>
-		<p class="text-[14px] font-medium mt-1" style="color: rgba(226, 229, 231, 0.66);">{label}</p>
 	</div>
 </div>

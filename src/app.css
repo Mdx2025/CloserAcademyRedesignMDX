@@ -132,6 +132,12 @@ body {
   box-shadow: 0 0 49.9px -8px rgba(0, 102, 146, 0.15);
 }
 
+/* ─── Secondary panel (glassmorphism, SVG filter blur) ─── */
+.bg-secondary {
+  background: rgba(254, 254, 255, 0.50);
+  box-shadow: 0 0 30.6px 0 rgba(0, 102, 146, 0.15);
+}
+
 /* ─── Calendar background ─── */
 .calendar-bg { background-color: var(--color-calendarbg); }
 
