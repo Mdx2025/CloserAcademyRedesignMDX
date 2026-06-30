@@ -21,7 +21,7 @@
 	<!-- Menu Section -->
 	<div class="mb-4">
 		<p class="text-[13px] font-black text-[rgba(0,17,25,0.4)] mb-4 ml-4 tracking-wider uppercase">MENU</p>
-		<div class="flex flex-col gap-2">
+		<div class="flex flex-col">
 
 			<!-- Dashboard -->
 			{#if active === 'Dashboard'}
@@ -108,7 +108,7 @@
 	<!-- Configurations Section -->
 	<div class="mt-4">
 		<p class="text-[13px] font-black text-[rgba(0,17,25,0.4)] mb-4 ml-4 tracking-wider uppercase">CONFIGURATIONS</p>
-		<div class="flex flex-col gap-2">
+		<div class="flex flex-col">
 			<a href="/" class="text-textprimary hover:bg-white/50 rounded-[23.5px] py-3.5 px-5 flex items-center gap-3 transition-colors">
 				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
 				<span class="font-bold text-[18px]">My Account</span>
@@ -121,7 +121,7 @@
 	</div>
 
 	<!-- Bottom Links -->
-	<div class="mt-auto flex flex-col gap-2">
+	<div class="mt-auto flex flex-col">
 		<a href="/" class="text-textmuted2 hover:text-textdark py-3 px-5 flex items-center gap-3 transition-colors">
 			<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
 			<span class="font-bold text-[18px]">Help and support</span>

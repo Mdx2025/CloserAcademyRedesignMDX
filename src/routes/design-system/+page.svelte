@@ -335,17 +335,17 @@
 				<div class="flex gap-6 h-[150px]">
 					<StatCard value="257" label="Jobs Postuled" variant="stat1">
 						{#snippet children()}
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
 						{/snippet}
 					</StatCard>
 					<StatCard value="76" label="Interviews Scheduled" variant="stat2">
 						{#snippet children()}
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
 						{/snippet}
 					</StatCard>
 					<StatCard value="95" label="Jobs Completed" variant="stat3">
 						{#snippet children()}
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
 						{/snippet}
 					</StatCard>
 				</div>
@@ -402,34 +402,36 @@
 			<div id="schedule" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">ScheduleEvent</h3>
 				<p class="text-[13px] text-textmuted mb-4">Three color variants: pink, green, blue. Positioned absolutely within the schedule timeline.</p>
-				<div class="relative h-[300px] bg-gray-50 rounded-2xl p-8 border border-gray-100 overflow-hidden">
-					<ScheduleEvent
-						title="Morning Routine"
-						time="07:00 AM"
-						variant="pink"
-						top="10px"
-						height="48px"
-					/>
-					<ScheduleEvent
-						title="Weekly Planning"
-						time="08:00 AM"
-						variant="green"
-						top="80px"
-						left="130px"
-						height="64px"
-					/>
-					<ScheduleEvent
-						title="Business Calls"
-						time="09:30 AM"
-						variant="blue"
-						top="170px"
-						left="240px"
-						height="86px"
-						avatars={[
-							{ src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&fit=crop', alt: 'Person 1' },
-							{ src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=64&h=64&fit=crop', alt: 'Person 2' }
-						]}
-					/>
+				<div class="flex-1 bg-surface rounded-[25px] p-8 flex flex-col relative h-[400px] overflow-hidden" style="box-shadow: 0px 0px 37.5px 0px rgba(0, 102, 146, 0.08);">
+					<div class="flex justify-between items-center mb-6 shrink-0">
+						<div class="flex items-center gap-6">
+							<h3 class="text-[20px] font-bold text-textprimary">13 - 20 July 2024</h3>
+							<div class="flex items-center gap-3">
+								<span class="text-[14px] font-semibold text-link-blue cursor-pointer hover:underline">Today</span>
+								<button class="text-gray-400 hover:text-gray-700">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+								</button>
+								<button class="text-gray-400 hover:text-gray-700">
+									<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+								</button>
+							</div>
+						</div>
+						<button class="text-textdark hover:text-gray-600">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+						</button>
+					</div>
+					<div class="flex-1 relative overflow-y-auto pb-10">
+						<div class="flex flex-col gap-8 relative">
+							<div class="schedule-line h-6 flex items-center"><span class="text-[13px] font-medium text-gray-500 w-[70px]">AM06:00</span></div>
+							<div class="schedule-line h-6 flex items-center"><span class="text-[13px] font-medium text-gray-500 w-[70px]">AM07:00</span></div>
+							<div class="schedule-line h-6 flex items-center"><span class="text-[13px] font-medium text-gray-500 w-[70px]">AM08:00</span></div>
+							<div class="schedule-line h-6 flex items-center"><span class="text-[13px] font-medium text-gray-500 w-[70px]">AM09:00</span></div>
+							<div class="schedule-line h-6 flex items-center"><span class="text-[13px] font-medium text-gray-500 w-[70px]">AM10:00</span></div>
+							<ScheduleEvent title="Morning Routine" time="07:00 AM" variant="pink" top="10px" height="48px" />
+							<ScheduleEvent title="Weekly Planning" time="08:00 AM" variant="green" top="80px" left="130px" height="64px" />
+							<ScheduleEvent title="Business Calls" time="09:30 AM" variant="blue" top="170px" left="240px" height="86px" avatars={[{ src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=64&h=64&fit=crop', alt: 'Person 1' }, { src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=64&h=64&fit=crop', alt: 'Person 2' }]} />
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

@@ -31,15 +31,13 @@
 	<div class="flex-1 flex flex-col h-full pt-8 pl-2 pr-10 pb-6 z-10 min-h-0">
 
 		<!-- HEADER -->
-		<header class="flex justify-between items-center mb-6 w-full shrink-0">
-			<div class="flex flex-col">
-				<h1 class="text-[22px] font-bold text-textprimary tracking-tight leading-tight">Hello, MDX Agency</h1>
-				<p class="text-[14px] font-bold text-primaryblue mt-1">Monday, 25 August 2024.</p>
-			</div>
-
-			<!-- Search & Controls -->
-			<div class="flex items-center gap-6">
-				<SearchBar />
+		<header class="flex flex-col gap-4 mb-6 w-full shrink-0">
+			<SearchBar />
+			<div class="flex justify-between items-center w-full">
+				<div class="flex flex-col">
+					<h1 class="text-[22px] font-bold text-textprimary tracking-tight leading-tight">Hello, MDX Agency</h1>
+					<p class="text-[14px] font-bold text-primaryblue mt-1">Monday, 25 August 2024.</p>
+				</div>
 
 				<!-- Controls -->
 				<div class="flex items-center gap-4">
@@ -119,21 +117,21 @@
 					<!-- Stat Card 1 -->
 					<StatCard value="257" label="Jobs Postuled" variant="stat1">
 						{#snippet children()}
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
 						{/snippet}
 					</StatCard>
 
 					<!-- Stat Card 2 -->
 					<StatCard value="76" label="Interviews Scheduled" variant="stat2">
 						{#snippet children()}
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
 						{/snippet}
 					</StatCard>
 
 					<!-- Stat Card 3 -->
 					<StatCard value="95" label="Jobs Completed" variant="stat3">
 						{#snippet children()}
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
 						{/snippet}
 					</StatCard>
 				</div>
@@ -202,7 +200,7 @@
 
 						<!-- Schedule Timeline -->
 						<div class="flex-1 relative overflow-y-auto pb-10">
-							<div class="flex flex-col gap-12 relative">
+							<div class="flex flex-col gap-8 relative">
 								{#each hours as hour}
 									<div class="schedule-line h-6 flex items-center">
 										<span class="text-[13px] font-medium text-gray-500 w-[70px]">{hour}</span>
