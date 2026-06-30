@@ -98,7 +98,7 @@
 	];
 </script>
 
-<div class="w-full h-dvh bg-bgmain flex">
+<div class="w-full h-dvh bg-bgmain flex overflow-hidden">
 
 	<!-- LEFT SIDEBAR: Design System Navigation -->
 	<nav class="w-[250px] h-full flex flex-col pt-8 pb-8 px-6 border-r border-gray-200/50 shrink-0 overflow-y-auto">
@@ -134,7 +134,7 @@
 	</nav>
 
 	<!-- MAIN CONTENT -->
-	<div class="flex-1 flex flex-col h-full">
+	<div class="flex-1 flex flex-col h-full min-h-0">
 
 		<!-- Page Header -->
 		<div class="border-b border-gray-200/50 bg-white/80 backdrop-blur-md shrink-0 z-50">

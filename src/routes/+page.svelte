@@ -131,7 +131,15 @@
 				</div>
 
 				<!-- BOTTOM ROW (Calendar + Upcoming + Schedule) -->
-				<div class="flex gap-4 flex-1 min-h-0">
+				<div class="flex gap-4 flex-1 min-h-0 bg-primary rounded-[30px] p-6 relative overflow-hidden">
+					<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
+						<defs>
+							<filter id="bottom-panel-blur" x="-10%" y="-10%" width="120%" height="120%">
+								<feGaussianBlur in="BackgroundImage" stdDeviation="5" />
+							</filter>
+						</defs>
+						<rect width="100%" height="100%" fill="rgba(249, 249, 249, 0.20)" filter="url(#bottom-panel-blur)" rx="30" />
+					</svg>
 
 					<!-- Calendar & Interviews Column -->
 					<div class="w-sm flex flex-col gap-4 shrink-0 h-full">
@@ -139,7 +147,7 @@
 						<CalendarWidget />
 
 						<!-- Upcoming Interviews (from Figma spec) -->
-						<div class="w-fit flex-1 relative bg-sky-700/60 rounded-3xl backdrop-blur-[5px] overflow-hidden">
+						<div class="w-full flex-1 relative bg-sky-700/60 rounded-3xl backdrop-blur-[5px] overflow-hidden">
 							<div class="absolute flex gap-[6.14px] right-5 top-[25px]">
 								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
 								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
