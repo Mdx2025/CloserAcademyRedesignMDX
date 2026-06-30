@@ -599,9 +599,13 @@ body {
     display: none;
   }
 
-  /* Hide header controls (theme toggle, notification, avatar) */
+  /* Header controls: tighter on mobile */
   .header-controls {
-    display: none;
+    gap: 0.375rem;
+  }
+  .header-controls .ctrl-btn {
+    width: 2.25rem;
+    height: 2.25rem;
   }
 
   /* Search bar → icon-only circle button */
