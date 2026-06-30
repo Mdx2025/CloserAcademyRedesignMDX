@@ -154,53 +154,26 @@
 
 						<CalendarWidget />
 
-						<!-- Upcoming Interviews (from Figma spec) -->
-						<div class="w-full flex-1 relative interviews-bg rounded-3xl overflow-hidden">
-							<div class="absolute flex gap-[6.14px] right-5 top-[25px]">
-								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
-								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
-								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
+						<!-- Upcoming Interviews -->
+						<div class="w-full flex-1 interviews-bg rounded-3xl overflow-hidden flex flex-col p-5">
+							<div class="flex justify-between items-center mb-4">
+								<p class="text-white text-xl font-normal">Upcoming interviews</p>
+								<div class="flex gap-[6.14px]">
+									<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
+									<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
+									<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
+								</div>
 							</div>
-							<p class="absolute left-5 top-[25px] text-white text-xl font-normal">Upcoming interviews</p>
-
-							<!-- Interview 1 -->
-							<div class="absolute left-5 right-5 top-[60px] h-36 bg-white/10 rounded-2xl backdrop-blur-[50.85px]"></div>
-							<div class="absolute left-[39px] top-[75px] w-28 h-7 bg-white/20 rounded-md flex items-center justify-center">
-								<span class="text-white text-sm">10-07-2025</span>
-							</div>
-							<div class="absolute left-[153px] top-[75px] w-20 h-7 bg-white/20 rounded-md flex items-center justify-center">
-								<span class="text-white text-sm">02:00 PM</span>
-							</div>
-							<p class="absolute left-[41px] top-[122px] w-60 text-white/40 text-sm leading-snug">Lorem ipsum dolor et same dolor et ipsum dolor lorem ipsum dolor...</p>
-							<div class="absolute left-[39px] top-[166px] flex items-center gap-2">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-								<span class="text-white text-sm">Remote</span>
-								<div class="w-0 h-3.5 border-l border-white ml-2 mr-2"></div>
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-								<span class="text-white text-sm">Full Time</span>
-							</div>
-							<div class="absolute right-[25px] top-[152px] size-9 bg-white/30 rounded-full flex items-center justify-center">
-								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg>
-							</div>
-
-							<!-- Interview 2 -->
-							<div class="absolute left-5 right-5 top-[210px] h-36 bg-white/10 rounded-2xl backdrop-blur-[50.85px]"></div>
-							<div class="absolute left-[39px] top-[225px] w-28 h-7 bg-white/20 rounded-md flex items-center justify-center">
-								<span class="text-white text-sm">10-07-2025</span>
-							</div>
-							<div class="absolute left-[153px] top-[225px] w-20 h-7 bg-white/20 rounded-md flex items-center justify-center">
-								<span class="text-white text-sm">02:00 PM</span>
-							</div>
-							<p class="absolute left-[41px] top-[272px] w-60 text-white/40 text-sm leading-snug">Lorem ipsum dolor et same dolor et ipsum dolor lorem ipsum dolor...</p>
-							<div class="absolute left-[39px] top-[316px] flex items-center gap-2">
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-								<span class="text-white text-sm">Remote</span>
-								<div class="w-0 h-3.5 border-l border-white ml-2 mr-2"></div>
-								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-								<span class="text-white text-sm">Full Time</span>
-							</div>
-							<div class="absolute right-[25px] top-[302px] size-9 bg-white/30 rounded-full flex items-center justify-center">
-								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg>
+							<div class="flex flex-col gap-3 flex-1 overflow-y-auto">
+								{#each interviewCards as card}
+									<InterviewCard
+										date={card.date}
+										time={card.time}
+										description={card.description}
+										location={card.location}
+										type={card.type}
+									/>
+								{/each}
 							</div>
 						</div>
 					</div>
