@@ -68,7 +68,7 @@
 		<div class="flex-1 flex gap-5 w-full min-h-0">
 
 			<!-- LEFT COLUMN: My Applications -->
-			<div class="w-md h-full flex flex-col shrink-0 bg-primary rounded-[30px] p-3 relative overflow-hidden">
+			<div class="w-md h-full flex flex-col shrink-0 bg-primary rounded-[30px] p-3 relative">
 				<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 					<defs>
 						<filter id="apps-panel-blur" x="-10%" y="-10%" width="120%" height="120%">
