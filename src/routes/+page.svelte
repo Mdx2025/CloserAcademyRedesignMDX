@@ -28,11 +28,11 @@
 	<SidebarNav active="Dashboard" />
 
 	<!-- MAIN CONTENT -->
-	<div class="flex-1 flex flex-col h-full pt-6 pl-2 pr-10 pb-6 z-10 min-h-0">
+	<div class="main-content flex-1 flex flex-col h-full pt-6 pl-2 pr-10 pb-6 z-10 min-h-0">
 
 		<!-- HEADER -->
 		<header class="flex justify-between items-center mb-6 w-full shrink-0">
-			<div class="flex flex-col">
+			<div class="header-greeting flex flex-col">
 				<h1 class="text-[22px] font-bold text-textprimary tracking-tight leading-tight">Hello, MDX Agency</h1>
 				<p class="text-[14px] font-bold text-primaryblue mt-1">Monday, 25 August 2024.</p>
 			</div>
@@ -40,11 +40,11 @@
 			<SearchBar />
 
 			<!-- Controls -->
-			<div class="flex items-center gap-3">
+			<div class="header-controls flex items-center gap-3">
 				<ThemeToggle />
 
 				<!-- Notification -->
-				<button class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-textprimary relative overflow-hidden">
+				<button class="ctrl-btn w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-textprimary relative overflow-hidden">
 					<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 						<defs>
 							<filter id="notif-blur" x="-20%" y="-20%" width="140%" height="140%">
@@ -58,17 +58,17 @@
 				</button>
 
 				<!-- Avatar -->
-				<div class="w-12 h-12 rounded-full bg-[#1F2937] flex items-center justify-center shadow-md overflow-hidden cursor-pointer">
+				<div class="ctrl-btn w-12 h-12 rounded-full bg-[#1F2937] flex items-center justify-center shadow-md overflow-hidden cursor-pointer">
 					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M4 22l6-15 4 8 6-15"/></svg>
 				</div>
 			</div>
 		</header>
 
 		<!-- DASHBOARD GRID -->
-		<div class="flex-1 flex gap-5 w-full min-h-0">
+		<div class="dashboard-grid flex-1 flex gap-5 w-full min-h-0">
 
 			<!-- LEFT COLUMN: My Applications -->
-			<div class="w-md h-full flex flex-col shrink-0 bg-primary rounded-[30px] p-3 relative">
+			<div class="apps-panel w-md h-full flex flex-col shrink-0 bg-primary rounded-[30px] p-3 relative">
 				<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 					<defs>
 						<filter id="apps-panel-blur" x="-10%" y="-10%" width="120%" height="120%">
@@ -78,12 +78,12 @@
 					<rect width="100%" height="100%" fill="rgba(249, 249, 249, 0.20)" filter="url(#apps-panel-blur)" rx="30" />
 				</svg>
 
-				<div class="px-8 mt-4 relative z-10">
-					<h2 class="text-[30px] font-bold text-heading-blue tracking-tight">My Applications</h2>
+				<div class="apps-header px-8 mt-4 relative z-10">
+					<h2 class="apps-title text-[30px] font-bold text-heading-blue tracking-tight">My Applications</h2>
 					<p class="text-[14px] font-bold text-[rgba(0,17,25,0.43)] mt-1">Lorem ipsum dolor et same</p>
 				</div>
 
-				<div class="flex flex-col gap-4 overflow-y-auto pb-2 px-4 py-8 flex-1 min-h-0 relative z-10">
+				<div class="apps-scroll flex flex-col gap-4 overflow-y-auto pb-2 px-4 py-8 flex-1 min-h-0 relative z-10">
 					{#each applicationCards as card, i}
 						<ApplicationCard
 							title={card.title}
@@ -98,10 +98,10 @@
 			</div>
 
 			<!-- RIGHT COLUMN: Metrics + Calendar + Schedule -->
-			<div class="flex-1 flex flex-col gap-4 h-full min-w-0">
+			<div class="right-column flex-1 flex flex-col gap-4 h-full min-w-0">
 
 				<!-- TOP METRICS ROW -->
-				<div class="flex gap-4 h-fit shrink-0 bg-primary rounded-[30px] p-3 relative overflow-hidden">
+				<div class="metrics-row flex gap-4 h-fit shrink-0 bg-primary rounded-[30px] p-3 relative overflow-hidden">
 					<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 						<defs>
 							<filter id="metrics-panel-blur" x="-10%" y="-10%" width="120%" height="120%">
@@ -136,7 +136,7 @@
 				</div>
 
 				<!-- BOTTOM ROW (Calendar + Upcoming + Schedule) -->
-				<div class="flex gap-4 flex-1 min-h-0 bg-primary rounded-[30px] p-3 relative overflow-hidden">
+				<div class="bottom-row flex gap-4 flex-1 min-h-0 bg-primary rounded-[30px] p-3 relative overflow-hidden">
 					<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 						<defs>
 							<filter id="bottom-panel-blur" x="-10%" y="-10%" width="120%" height="120%">
@@ -147,14 +147,14 @@
 					</svg>
 
 					<!-- Calendar & Interviews Column -->
-					<div class="w-sm flex flex-col gap-4 shrink-0 h-full">
+					<div class="calendar-col w-sm flex flex-col gap-4 shrink-0 h-full">
 
 						<CalendarWidget />
 
 						<!-- Upcoming Interviews -->
-						<div class="w-full flex-1 interviews-bg rounded-3xl overflow-hidden flex flex-col p-5">
+						<div class="interviews-section w-full flex-1 interviews-bg rounded-3xl overflow-hidden flex flex-col p-5">
 							<div class="flex justify-between items-center mb-4">
-								<p class="text-white text-xl font-normal">Upcoming interviews</p>
+								<p class="interviews-title text-white text-xl font-normal">Upcoming interviews</p>
 								<div class="flex gap-[6.14px]">
 									<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
 									<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
@@ -176,12 +176,12 @@
 					</div>
 
 					<!-- DAILY SCHEDULE BLOCK -->
-					<div class="flex-1 bg-surface rounded-[25px] p-8 flex flex-col relative h-full overflow-hidden" style="box-shadow: 0px 0px 37.5px 0px rgba(0, 102, 146, 0.08);">
+					<div class="schedule-panel flex-1 bg-surface rounded-[25px] p-8 flex flex-col relative h-full overflow-hidden" style="box-shadow: 0px 0px 37.5px 0px rgba(0, 102, 146, 0.08);">
 
 						<!-- Header -->
 						<div class="flex justify-between items-center mb-6 shrink-0 relative z-20">
 							<div class="flex items-center gap-6">
-								<h3 class="text-[20px] font-bold text-textprimary">13 - 20 July 2024</h3>
+								<h3 class="schedule-header-title text-[20px] font-bold text-textprimary">13 - 20 July 2024</h3>
 								<div class="flex items-center gap-3">
 									<span class="text-[14px] font-semibold text-link-blue cursor-pointer hover:underline">Today</span>
 									<button class="text-gray-400 hover:text-gray-700">

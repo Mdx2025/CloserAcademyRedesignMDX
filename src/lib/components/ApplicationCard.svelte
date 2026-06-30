@@ -3,7 +3,7 @@
 	let { title, subtitle, description, location, type, linkText, linkHref = '/' } = $props();
 </script>
 
-<div class="bg-applicationcard p-6 space-y-6">
+<div class="app-card bg-applicationcard p-6 space-y-6">
 	<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 		<defs>
 			<filter id="appcard-blur" x="-20%" y="-20%" width="140%" height="140%">
@@ -19,7 +19,7 @@
 	</button>
 
 	<div class="flex flex-col gap-2 relative z-10">
-		<h3 class="text-[20px] font-semibold text-textdark pr-8">{title}</h3>
+		<h3 class="app-card-title text-[20px] font-semibold text-textdark pr-8">{title}</h3>
 		<p class="text-[13px] font-medium text-gray-500">{subtitle}</p>
 		<p class="text-[13px] text-gray-400 leading-relaxed line-clamp-2">{description}</p>
 	</div>
