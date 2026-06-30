@@ -540,6 +540,11 @@ body {
   }
 }
 
+/* ── Mobile logo: hidden by default on desktop ── */
+.mobile-logo {
+  display: none;
+}
+
 /* ── ≤1024px: stack layout vertically ── */
 @media (max-width: 1024px) {
   .dashboard-grid {
@@ -574,5 +579,109 @@ body {
     width: auto;
     flex: 1;
     min-width: 200px;
+  }
+}
+
+/* ── ≤768px: mobile — sidebar hidden, header simplified ── */
+@media (max-width: 768px) {
+  /* Hide sidebar completely */
+  .sidebar-nav {
+    display: none;
+  }
+
+  /* Show mobile logo */
+  .mobile-logo {
+    display: flex !important;
+  }
+
+  /* Hide desktop greeting */
+  .header-greeting {
+    display: none;
+  }
+
+  /* Hide header controls (theme toggle, notification, avatar) */
+  .header-controls {
+    display: none;
+  }
+
+  /* Search bar → icon-only circle button */
+  .search-bar {
+    max-width: 44px;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    border-radius: 50%;
+    background: #FEFEFF;
+    box-shadow: 0 0 30.6px 0 rgba(0, 102, 146, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+  }
+  .search-bar input {
+    display: none;
+  }
+  .search-bar > div:first-child {
+    position: static;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Main content: full width, adjusted padding */
+  .main-content {
+    padding: 1rem;
+    padding-top: 1.25rem;
+  }
+
+  /* Dashboard grid: single column */
+  .dashboard-grid {
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 1rem;
+  }
+  .apps-panel {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    flex-shrink: 0;
+  }
+  .right-column {
+    width: 100%;
+  }
+
+  /* Metrics row: wrap on mobile */
+  .metrics-row {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .profile-card {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+  .metrics-row .stat-card-wrapper {
+    flex: 1;
+    min-width: 90px;
+  }
+
+  /* Bottom row: stack */
+  .bottom-row {
+    flex-direction: column;
+  }
+  .calendar-col {
+    width: 100%;
+    flex-direction: column;
+  }
+  .schedule-panel {
+    min-height: 280px;
+    padding: 1rem;
+  }
+
+  /* Event blocks: fit mobile width */
+  .event-block {
+    left: 70px;
+    width: calc(100% - 80px);
   }
 }

@@ -32,6 +32,19 @@
 
 		<!-- HEADER -->
 		<header class="flex justify-between items-center mb-6 w-full shrink-0">
+			<!-- Mobile Logo (hidden on desktop, shown on mobile) -->
+			<div class="mobile-logo items-center gap-3">
+				<div class="relative w-10 h-10">
+					<div class="absolute top-0 left-0 w-5 h-5 bg-[#3B82F6] rounded-sm rotate-45 opacity-80"></div>
+					<div class="absolute top-2 left-2 w-5 h-5 bg-[#10B981] rounded-sm rotate-45 opacity-80"></div>
+					<div class="absolute top-4 left-0 w-5 h-5 bg-[#0EA5E9] rounded-sm rotate-45 opacity-80"></div>
+				</div>
+				<div class="flex flex-col">
+					<span class="text-[22px] font-bold leading-none tracking-tight text-[#0F172A]">SALES</span>
+					<span class="text-[10px] font-bold tracking-[0.2em] text-[#0F172A]">TALENTS</span>
+				</div>
+			</div>
+
 			<div class="header-greeting flex flex-col">
 				<h1 class="text-[22px] font-bold text-textprimary tracking-tight leading-tight">Hello, MDX Agency</h1>
 				<p class="text-[14px] font-bold text-primaryblue mt-1">Monday, 25 August 2024.</p>
