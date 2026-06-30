@@ -252,8 +252,8 @@ body {
    RESPONSIVE — desktop-first from 1920 base
    ═══════════════════════════════════════════════ */
 
-/* ── < 1536px: tighten gaps, reduce sidebar ── */
-@media (max-width: 1535px) {
+/* ── ≤1536px: tighten gaps, reduce sidebar + panels ── */
+@media (max-width: 1536px) {
   .sidebar-nav {
     width: 200px;
     padding-left: 1rem;
@@ -272,66 +272,20 @@ body {
     gap: 0.75rem;
   }
   .apps-panel {
-    width: 360px;
+    width: 340px;
   }
   .apps-title {
     font-size: 24px;
   }
-  .metrics-row .stat-card-wrapper {
-    min-width: 140px;
-  }
-  .calendar-col {
-    width: 320px;
-  }
-  .schedule-panel {
-    padding: 1.25rem;
-  }
-  .schedule-header-title {
-    font-size: 16px;
-  }
-  .bottom-row {
-    gap: 0.75rem;
-  }
-}
-
-/* ── < 1440px: further compact ── */
-@media (max-width: 1439px) {
-  .sidebar-nav {
-    width: 180px;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-  .sidebar-nav .sidebar-logo-gap {
-    margin-bottom: 1.5rem;
-  }
-  .sidebar-nav .sidebar-link {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-  .apps-panel {
-    width: 320px;
-  }
-  .apps-title {
-    font-size: 22px;
-  }
-  .apps-header {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
   .profile-card {
-    width: 280px;
+    width: 300px;
   }
   .profile-avatar {
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
   }
   .profile-name {
-    font-size: 16px;
-  }
-  .calendar-col {
-    width: 280px;
+    font-size: 17px;
   }
   .metrics-row {
     gap: 0.5rem;
@@ -354,11 +308,20 @@ body {
     top: 12px;
     left: 20px;
   }
-  .header-greeting h1 {
-    font-size: 18px;
+  .calendar-col {
+    width: 300px;
+  }
+  .schedule-panel {
+    padding: 1.25rem;
+  }
+  .schedule-header-title {
+    font-size: 16px;
+  }
+  .bottom-row {
+    gap: 0.75rem;
   }
   .search-bar {
-    max-width: 320px;
+    max-width: 360px;
   }
   .search-bar input {
     padding-top: 0.625rem;
@@ -366,8 +329,69 @@ body {
   }
 }
 
-/* ── < 1366px: sidebar icons-only, compact panels ── */
-@media (max-width: 1365px) {
+/* ── ≤1440px: compact sidebar, smaller panels ── */
+@media (max-width: 1440px) {
+  .sidebar-nav {
+    width: 180px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .sidebar-nav .sidebar-logo-gap {
+    margin-bottom: 1.5rem;
+  }
+  .sidebar-nav .sidebar-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .apps-panel {
+    width: 300px;
+  }
+  .apps-title {
+    font-size: 22px;
+  }
+  .apps-header {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .profile-card {
+    width: 260px;
+  }
+  .profile-avatar {
+    width: 56px;
+    height: 56px;
+  }
+  .profile-name {
+    font-size: 16px;
+  }
+  .calendar-col {
+    width: 270px;
+  }
+  .metrics-row .stat-card-wrapper {
+    min-width: 110px;
+    height: 120px;
+  }
+  .metrics-row .stat-value {
+    font-size: 24px;
+    top: 50px;
+    left: 20px;
+  }
+  .metrics-row .stat-label {
+    font-size: 10px;
+    top: 85px;
+    left: 20px;
+  }
+  .header-greeting h1 {
+    font-size: 18px;
+  }
+  .search-bar {
+    max-width: 280px;
+  }
+}
+
+/* ── ≤1366px: sidebar icons-only, compact panels ── */
+@media (max-width: 1366px) {
   .sidebar-nav {
     width: 70px;
     padding-left: 0.5rem;
@@ -408,39 +432,39 @@ body {
     padding-right: 1.25rem;
   }
   .apps-panel {
-    width: 300px;
+    width: 280px;
   }
   .apps-title {
     font-size: 20px;
   }
   .profile-card {
-    width: 240px;
+    width: 220px;
   }
   .profile-avatar {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
   }
   .profile-name {
-    font-size: 15px;
+    font-size: 14px;
   }
   .profile-subtitle {
-    font-size: 12px;
+    font-size: 11px;
   }
   .calendar-col {
-    width: 260px;
+    width: 240px;
   }
   .metrics-row .stat-card-wrapper {
-    min-width: 100px;
-    height: 120px;
+    min-width: 90px;
+    height: 110px;
   }
   .metrics-row .stat-value {
-    font-size: 24px;
-    top: 50px;
+    font-size: 22px;
+    top: 45px;
     left: 16px;
   }
   .metrics-row .stat-label {
-    font-size: 10px;
-    top: 85px;
+    font-size: 9px;
+    top: 78px;
     left: 16px;
   }
   .metrics-row .stat-icon {
@@ -450,7 +474,7 @@ body {
     left: 16px;
   }
   .search-bar {
-    max-width: 240px;
+    max-width: 220px;
   }
   .header-controls {
     gap: 0.5rem;
@@ -459,16 +483,8 @@ body {
     width: 2.5rem;
     height: 2.5rem;
   }
-}
-
-/* ── < 1280px: further squeeze ── */
-@media (max-width: 1279px) {
-  .apps-panel {
-    width: 260px;
-  }
-  .apps-scroll {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+  .header-greeting h1 {
+    font-size: 16px;
   }
   .app-card {
     padding: 1rem;
@@ -476,21 +492,42 @@ body {
   .app-card-title {
     font-size: 16px;
   }
+  .apps-scroll {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    gap: 0.5rem;
+  }
+}
+
+/* ── ≤1280px: further squeeze ── */
+@media (max-width: 1280px) {
+  .apps-panel {
+    width: 250px;
+  }
+  .app-card {
+    padding: 0.75rem;
+  }
+  .app-card-title {
+    font-size: 15px;
+  }
   .calendar-col {
-    width: 240px;
+    width: 220px;
   }
   .schedule-panel {
     padding: 1rem;
   }
   .schedule-header-title {
-    font-size: 14px;
+    font-size: 13px;
   }
   .profile-card {
-    width: 220px;
+    width: 200px;
   }
   .profile-card .profile-switch {
     gap: 0.5rem;
     padding: 0.25rem 0.5rem;
+  }
+  .profile-card .profile-switch span {
+    font-size: 12px;
   }
   .interviews-section {
     padding: 0.75rem;
@@ -498,10 +535,13 @@ body {
   .interviews-section .interviews-title {
     font-size: 16px;
   }
+  .search-bar {
+    max-width: 180px;
+  }
 }
 
-/* ── < 1024px: stack calendar below, minimal layout ── */
-@media (max-width: 1023px) {
+/* ── ≤1024px: stack layout vertically ── */
+@media (max-width: 1024px) {
   .dashboard-grid {
     flex-direction: column;
     overflow-y: auto;
