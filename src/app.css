@@ -203,9 +203,25 @@ body {
   box-shadow: 0 4px 14px rgba(107, 189, 235, 0.4);
 }
 
-/* Event layout (flex-direction per variant) */
+/* ─── ApplicationCard glassmorphism ─── */
+.bg-applicationcard {
+  border-radius: 25px;
+  background: rgba(249, 249, 249, 0.20);
+  box-shadow: 0 0 35.6px 4px rgba(0, 102, 146, 0.10);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ─── InterviewCard glassmorphism ─── */
+.bg-interview {
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(50.85px);
+}
+
+/* Event layout (flex-direction + align per variant) */
 .bg-event-pink {
   flex-direction: row;
+  align-items: center;
 }
 .bg-event-green {
   flex-direction: column;

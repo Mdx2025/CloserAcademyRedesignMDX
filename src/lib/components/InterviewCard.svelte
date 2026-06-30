@@ -3,10 +3,10 @@
 	let { date, time, description, location, type } = $props();
 </script>
 
-<div class="rounded-2xl p-5 relative group cursor-pointer hover:brightness-110 transition-all overflow-hidden" style="background: rgba(255, 255, 255, 0.10); backdrop-filter: blur(50.85px);">
+<div class="bg-interview rounded-2xl p-4 relative group cursor-pointer hover:brightness-110 transition-all overflow-hidden">
 	<!-- Content -->
 	<div class="relative z-10">
-		<div class="flex gap-3 mb-4">
+		<div class="flex gap-3 mb-2">
 			<div class="bg-white/20 text-white text-[12px] font-semibold px-3 py-1.5 rounded-md border border-white/10">{date}</div>
 			<div class="bg-white/20 text-white text-[12px] font-semibold px-3 py-1.5 rounded-md border border-white/10">{time}</div>
 		</div>
