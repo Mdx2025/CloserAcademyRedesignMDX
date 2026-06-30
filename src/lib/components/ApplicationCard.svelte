@@ -9,11 +9,13 @@
 		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
 	</button>
 
-	<h3 class="text-[20px] font-semibold text-textdark pr-8">{title}</h3>
-	<p class="text-[13px] font-medium text-gray-500 mt-1.5">{subtitle}</p>
-	<p class="text-[13px] text-gray-400 leading-relaxed mt-2 line-clamp-2">{description}</p>
+	<div class="flex flex-col gap-2">
+		<h3 class="text-[20px] font-semibold text-textdark pr-8">{title}</h3>
+		<p class="text-[13px] font-medium text-gray-500">{subtitle}</p>
+		<p class="text-[13px] text-gray-400 leading-relaxed line-clamp-2">{description}</p>
+	</div>
 
-	<div class="flex items-center justify-between mt-6 pt-5 border-t border-gray-100">
+	<div class="flex items-center justify-between">
 		<div class="flex items-center gap-4">
 			<div class="flex items-center gap-1.5 text-[13px] font-semibold text-textdark">
 				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>

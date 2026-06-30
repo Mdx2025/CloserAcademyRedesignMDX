@@ -38,9 +38,9 @@
   --color-event-pink: #E7A9F5;
   --color-event-pink-accent: #db5aee;
   --color-event-pink-light: #db94e8;
-  --color-event-green: #A3E596;
+  --color-event-green: #A0D186;
   --color-event-green-accent: #71c23b;
-  --color-event-blue: #6BBDEB;
+  --color-event-blue: #6AB7E1;
 
   /* ── Typography Scale ── */
   --text-2xs: 10px;
@@ -201,6 +201,17 @@ body {
   background-color: var(--color-event-blue);
   color: #fff;
   box-shadow: 0 4px 14px rgba(107, 189, 235, 0.4);
+}
+
+/* Event layout (flex-direction per variant) */
+.bg-event-pink {
+  flex-direction: row;
+}
+.bg-event-green {
+  flex-direction: column;
+}
+.bg-event-blue {
+  flex-direction: column;
 }
 
 /* Event time text */

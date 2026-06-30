@@ -120,23 +120,23 @@ export const scheduleEvents = [
 		title: 'Morning Routine',
 		time: '07:00 AM',
 		variant: 'pink',
-		top: '10px',
+		top: '2%',
 		height: '48px'
 	},
 	{
 		title: 'Weekly Planning',
 		time: '07:00 AM',
 		variant: 'green',
-		top: '82px',
-		left: '130px',
+		top: '17%',
+		left: '27%',
 		height: '64px'
 	},
 	{
 		title: 'Business Calls',
 		time: '07:00 AM',
 		variant: 'blue',
-		top: '192px',
-		left: '240px',
+		top: '40%',
+		left: '50%',
 		height: '86px',
 		avatars: [
 			{
@@ -153,8 +153,8 @@ export const scheduleEvents = [
 		title: 'Weekly Planning',
 		time: '07:00 AM',
 		variant: 'green',
-		top: '442px',
-		left: '130px',
+		top: '80%',
+		left: '27%',
 		height: '64px'
 	}
 ];
