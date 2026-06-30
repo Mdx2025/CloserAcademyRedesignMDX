@@ -78,12 +78,12 @@
 					<rect width="100%" height="100%" fill="rgba(249, 249, 249, 0.20)" filter="url(#apps-panel-blur)" rx="30" />
 				</svg>
 
-				<div class="px-6 pb-8 mt-4 shrink-0 relative z-10">
+				<div class="px-6 mt-4 relative z-10">
 					<h2 class="text-[30px] font-bold text-heading-blue tracking-tight">My Applications</h2>
 					<p class="text-[14px] font-bold text-[rgba(0,17,25,0.43)] mt-1">Lorem ipsum dolor et same</p>
 				</div>
 
-				<div class="flex flex-col gap-4 overflow-y-auto pb-2 px-4 flex-1 min-h-0 relative z-10">
+				<div class="flex flex-col gap-4 overflow-y-auto pb-2 px-4 py-4 flex-1 min-h-0 relative z-10">
 					{#each applicationCards as card, i}
 						<ApplicationCard
 							title={card.title}
