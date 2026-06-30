@@ -3,7 +3,7 @@
 	let { active = 'Dashboard' } = $props();
 </script>
 
-<div class="w-[250px] h-full flex flex-col pt-10 pb-10 px-6 border-r border-gray-200/50 relative z-20">
+<div class="w-2xs h-full flex flex-col pt-10 pb-10 px-6 border-r border-gray-200/50 relative z-20">
 
 	<!-- Logo -->
 	<div class="flex items-center gap-3 mb-14">

@@ -22,7 +22,7 @@
 		</button>
 	</div>
 
-	<div class="grid grid-cols-7 gap-y-4 text-center">
+	<div class="grid grid-cols-7 gap-y-1 text-center">
 		<!-- Day headers -->
 		{#each days as day}
 			<div class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{day}</div>

@@ -28,7 +28,7 @@
 	<SidebarNav active="Dashboard" />
 
 	<!-- MAIN CONTENT -->
-	<div class="flex-1 flex flex-col h-full pt-8 pl-8 pr-10 pb-6 z-10 overflow-hidden">
+	<div class="flex-1 flex flex-col h-full pt-8 pl-2 pr-10 pb-6 z-10 overflow-hidden">
 
 		<!-- HEADER -->
 		<header class="flex justify-between items-center mb-6 w-full shrink-0">
@@ -63,7 +63,7 @@
 		<div class="flex-1 flex gap-5 w-full min-h-0">
 
 			<!-- LEFT COLUMN: My Applications -->
-			<div class="w-[33%] max-w-[500px] min-w-[350px] h-full flex flex-col shrink-0 bg-primary rounded-[30px] p-3 relative overflow-hidden">
+			<div class="w-md h-full flex flex-col shrink-0 bg-primary rounded-[30px] p-3 relative overflow-hidden">
 				<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 					<defs>
 						<filter id="apps-panel-blur" x="-10%" y="-10%" width="120%" height="120%">
@@ -78,7 +78,7 @@
 					<p class="text-[14px] font-bold text-[rgba(0,17,25,0.43)] mt-1">Lorem ipsum dolor et same</p>
 				</div>
 
-				<div class="flex flex-col gap-4 overflow-y-auto pb-2 flex-1 min-h-0 relative z-10">
+				<div class="flex flex-col gap-4 overflow-y-auto pb-2 px-2 flex-1 min-h-0 relative z-10">
 					{#each applicationCards as card, i}
 						<ApplicationCard
 							title={card.title}

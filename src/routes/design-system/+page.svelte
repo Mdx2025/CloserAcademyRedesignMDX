@@ -354,15 +354,7 @@
 			<!-- ApplicationCard -->
 			<div id="app-card" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">ApplicationCard</h3>
-				<div class="grid grid-cols-2 gap-6 max-w-[960px]">
-					<ApplicationCard
-						title="Job in Graphic Design"
-						subtitle="Lorem ipsum dolor et same"
-						description="Lorem ipsum dolor et same dolor et ipsum dolor lorem ipsum dolor..."
-						location="Remote"
-						type="Full Time"
-						linkText="Read More"
-					/>
+				<div class="max-w-[480px]">
 					<ApplicationCard
 						title="Job in Web Development"
 						subtitle="Building responsive websites"
