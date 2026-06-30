@@ -12,7 +12,7 @@
 	import ScheduleEvent from '$lib/components/ScheduleEvent.svelte';
 	import ProfileCard from '$lib/components/ProfileCard.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	/* ── Color swatches ── */
+
 	const colors = [
 		{ name: 'Primary Dark', token: '--color-textprimary', hex: '#001119', dark: true },
 		{ name: 'Text Dark', token: '--color-textdark', hex: '#1E293B', dark: true },
@@ -43,7 +43,6 @@
 		{ name: 'Border', token: '--color-border', hex: '#e2e5e7', dark: false },
 	];
 
-	/* ── Typography scale ── */
 	const typographyScale = [
 		{ size: '10px', lineHeight: '14px', token: '--text-2xs', label: '2XS', weight: 700, sample: 'TRACKING LABEL' },
 		{ size: '13px', lineHeight: '18px', token: '--text-xs-figma', label: 'XS Figma', weight: 500, sample: 'Subtitle or meta text' },
@@ -59,7 +58,6 @@
 		{ size: '52px', lineHeight: '58px', token: '--text-6xl-figma', label: '6XL Figma', weight: 700, sample: '257' },
 	];
 
-	/* ── Font weights ── */
 	const fontWeights = [
 		{ weight: 300, name: 'Light' },
 		{ weight: 400, name: 'Regular' },
@@ -69,10 +67,8 @@
 		{ weight: 800, name: 'Extrabold' },
 	];
 
-	/* ── Spacing scale ── */
 	const spacingScale = [4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80];
 
-	/* ── Border radius ── */
 	const radii = [
 		{ value: '5px', token: '--radius-xs', label: 'XS' },
 		{ value: '7px', token: '--radius-sm', label: 'SM' },
@@ -87,7 +83,6 @@
 		{ value: '100px', token: '--radius-full', label: 'Full' },
 	];
 
-	/* ── Shadows ── */
 	const shadows = [
 		{ name: 'Soft', token: '--shadow-soft', value: '0 10px 40px -10px rgba(0,0,0,0.05)' },
 		{ name: 'Figma Soft', token: '--shadow-figma-soft', value: '0 0 35.6px 4px rgba(16,24,32,0.08)' },
@@ -98,10 +93,10 @@
 	];
 </script>
 
-<div class="w-full h-dvh bg-bgmain flex overflow-hidden">
+<div class="h-dvh flex bg-bgmain overflow-hidden">
 
 	<!-- LEFT SIDEBAR: Design System Navigation -->
-	<nav class="w-[250px] h-full flex flex-col pt-8 pb-8 px-6 border-r border-gray-200/50 shrink-0 overflow-y-auto">
+	<nav class="w-[250px] shrink-0 h-full overflow-y-auto pt-8 pb-8 px-6 border-r border-gray-200/50">
 		<a href="/" class="flex items-center gap-2 mb-8 text-link-blue hover:text-link-blue-hover">
 			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
 			<span class="text-[14px] font-semibold">Dashboard</span>
@@ -133,23 +128,22 @@
 		</div>
 	</nav>
 
-	<!-- MAIN CONTENT -->
-	<div class="flex-1 flex flex-col h-full min-h-0">
+	<!-- MAIN CONTENT — single scroll container -->
+	<main class="flex-1 h-full overflow-y-auto">
 
-		<!-- Page Header -->
-		<div class="border-b border-gray-200/50 bg-white/80 backdrop-blur-md shrink-0 z-50">
+		<!-- Sticky Header -->
+		<div class="sticky top-0 z-50 border-b border-gray-200/50 bg-white/80 backdrop-blur-md">
 			<div class="px-10 py-5">
 				<h1 class="text-[22px] font-bold text-textprimary tracking-tight">Design System</h1>
 				<p class="text-[14px] text-textmuted mt-1">Tokens, Components & Variants</p>
 			</div>
 		</div>
 
-		<div class="flex-1 overflow-y-auto px-10 py-10 flex flex-col gap-20">
+		<!-- Content sections -->
+		<div class="px-10 py-10">
 
-		<!-- ════════════════════════════════════════════
-		     SECTION: Colors
-		     ════════════════════════════════════════════ -->
-		<section id="colors">
+		<!-- Colors -->
+		<section id="colors" class="mb-20">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Colors</h2>
 			<p class="text-[14px] text-textmuted mb-8">All color tokens from Figma, defined in <code class="text-[13px] bg-gray-100 px-1.5 py-0.5 rounded">@theme</code></p>
 
@@ -169,14 +163,11 @@
 			</div>
 		</section>
 
-		<!-- ════════════════════════════════════════════
-		     SECTION: Typography
-		     ════════════════════════════════════════════ -->
-		<section id="typography">
+		<!-- Typography -->
+		<section id="typography" class="mb-20">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Typography</h2>
 			<p class="text-[14px] text-textmuted mb-8">Inter, weights 300--800. All sizes from the Figma file.</p>
 
-			<!-- Size scale -->
 			<div class="flex flex-col gap-6 mb-12">
 				{#each typographyScale as t}
 					<div class="flex items-baseline gap-6 border-b border-gray-100 pb-4">
@@ -189,7 +180,6 @@
 				{/each}
 			</div>
 
-			<!-- Weight showcase -->
 			<h3 class="text-[18px] font-bold text-textdark mb-4">Font Weights</h3>
 			<div class="grid grid-cols-6 gap-6">
 				{#each fontWeights as fw}
@@ -202,10 +192,8 @@
 			</div>
 		</section>
 
-		<!-- ════════════════════════════════════════════
-		     SECTION: Spacing
-		     ════════════════════════════════════════════ -->
-		<section id="spacing">
+		<!-- Spacing -->
+		<section id="spacing" class="mb-20">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Spacing</h2>
 			<p class="text-[14px] text-textmuted mb-8">Visual spacing scale used throughout the dashboard.</p>
 
@@ -219,10 +207,8 @@
 			</div>
 		</section>
 
-		<!-- ════════════════════════════════════════════
-		     SECTION: Border Radius
-		     ════════════════════════════════════════════ -->
-		<section id="radius">
+		<!-- Border Radius -->
+		<section id="radius" class="mb-20">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Border Radius</h2>
 			<p class="text-[14px] text-textmuted mb-8">Radius tokens from the Figma design spec.</p>
 
@@ -240,17 +226,15 @@
 			</div>
 		</section>
 
-		<!-- ════════════════════════════════════════════
-		     SECTION: Shadows
-		     ════════════════════════════════════════════ -->
-		<section id="shadows">
+		<!-- Shadows -->
+		<section id="shadows" class="mb-20">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Shadows</h2>
 			<p class="text-[14px] text-textmuted mb-8">Box-shadow tokens extracted from Figma.</p>
 
 			<div class="grid grid-cols-3 gap-6">
 				{#each shadows as s}
 					<div
-						class="bg-white rounded-2xl p-6 border border-gray-100"
+						class="bg-white rounded-2xl p-3 border border-gray-100"
 						style="box-shadow: {s.value};"
 					>
 						<p class="text-[15px] font-semibold text-textdark">{s.name}</p>
@@ -261,33 +245,48 @@
 			</div>
 		</section>
 
-		<!-- ════════════════════════════════════════════
-		     SECTION: Components
-		     ════════════════════════════════════════════ -->
-		<section id="components">
+		<!-- Gradients -->
+		<section id="gradients" class="mb-20">
+			<h2 class="text-[22px] font-bold text-textdark mb-2">Gradients</h2>
+			<p class="text-[14px] text-textmuted mb-8">Key gradient backgrounds used in the dashboard.</p>
+
+			<div class="grid grid-cols-3 gap-6">
+				<div class="rounded-2xl p-3 h-32 flex flex-col justify-end bg-gradient-active">
+					<p class="text-white font-semibold text-[15px]">Active Nav</p>
+					<p class="text-white/70 text-[11px] font-mono">90deg, #07629E, #1DA0DB</p>
+				</div>
+				<div class="rounded-2xl p-3 h-32 flex flex-col justify-end interviews-bg">
+					<p class="text-white font-semibold text-[15px]">Interviews BG</p>
+					<p class="text-white/70 text-[11px] font-mono">180deg, #033E6A, #064576</p>
+				</div>
+				<div class="rounded-2xl p-3 h-32 flex flex-col justify-end" style="background: linear-gradient(135deg, #065992, #1DA0DB);">
+					<p class="text-white font-semibold text-[15px]">Stat Gradient</p>
+					<p class="text-white/70 text-[11px] font-mono">135deg, #065992, #1DA0DB</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Components -->
+		<section id="components" class="mb-20">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Components</h2>
 			<p class="text-[14px] text-textmuted mb-8">All reusable Svelte 5 components with their variants.</p>
 
-			<!-- ── Buttons & Links ── -->
+			<!-- Buttons & Links -->
 			<div id="buttons" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">Buttons & Links</h3>
 				<div class="flex items-center gap-4 flex-wrap">
-					<!-- Active nav button -->
 					<a href="/" class="bg-gradient-active text-white rounded-full py-3.5 px-6 flex items-center gap-3 shadow-lg shadow-blue-500/30 font-medium text-[15px]">
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
 						Active Nav Item
 					</a>
-					<!-- Inactive nav button -->
 					<a href="/" class="text-textdark hover:bg-white/50 rounded-full py-3.5 px-6 flex items-center gap-3 transition-colors border border-gray-200 font-medium text-[15px]">
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
 						Inactive Nav Item
 					</a>
-					<!-- Link -->
 					<a href="/" class="flex items-center gap-1 text-[13px] font-semibold text-link-blue hover:text-link-blue-hover">
 						Read More
 						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
 					</a>
-					<!-- Notification button -->
 					<button class="w-12 h-12 rounded-full bg-togbg flex items-center justify-center text-gray-600 relative">
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
 						<div class="absolute top-3 right-3.5 w-2 h-2 rounded-full bg-red-500"></div>
@@ -295,7 +294,7 @@
 				</div>
 			</div>
 
-			<!-- ── ThemeToggle ── -->
+			<!-- ThemeToggle -->
 			<div id="theme-toggle" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">ThemeToggle</h3>
 				<div class="flex items-center gap-8">
@@ -306,7 +305,7 @@
 				</div>
 			</div>
 
-			<!-- ── SearchBar ── -->
+			<!-- SearchBar -->
 			<div id="search-bar" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">SearchBar</h3>
 				<div class="bg-bgmain p-8 rounded-2xl">
@@ -314,7 +313,7 @@
 				</div>
 			</div>
 
-			<!-- ── ProfileCard ── -->
+			<!-- ProfileCard -->
 			<div id="profile-card" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">ProfileCard</h3>
 				<div class="bg-bgmain p-8 rounded-2xl flex gap-6">
@@ -329,7 +328,7 @@
 				</div>
 			</div>
 
-			<!-- ── StatCard ── -->
+			<!-- StatCard -->
 			<div id="stat-card" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">StatCard</h3>
 				<p class="text-[13px] text-textmuted mb-4">Three color variants: stat1, stat2, stat3</p>
@@ -352,7 +351,7 @@
 				</div>
 			</div>
 
-			<!-- ── ApplicationCard ── -->
+			<!-- ApplicationCard -->
 			<div id="app-card" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">ApplicationCard</h3>
 				<div class="grid grid-cols-2 gap-6 max-w-[960px]">
@@ -375,7 +374,7 @@
 				</div>
 			</div>
 
-			<!-- ── InterviewCard ── -->
+			<!-- InterviewCard -->
 			<div id="interview-card" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">InterviewCard</h3>
 				<p class="text-[13px] text-textmuted mb-4">Glassmorphism cards used in the dark Upcoming Interviews section</p>
@@ -399,7 +398,7 @@
 				</div>
 			</div>
 
-			<!-- ── CalendarWidget ── -->
+			<!-- CalendarWidget -->
 			<div id="calendar" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">CalendarWidget</h3>
 				<div class="max-w-[360px]">
@@ -407,7 +406,7 @@
 				</div>
 			</div>
 
-			<!-- ── ScheduleEvent ── -->
+			<!-- ScheduleEvent -->
 			<div id="schedule" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">ScheduleEvent</h3>
 				<p class="text-[13px] text-textmuted mb-4">Three color variants: pink, green, blue. Positioned absolutely within the schedule timeline.</p>
@@ -441,39 +440,16 @@
 					/>
 				</div>
 			</div>
-
-		</section>
-
-		<!-- ════════════════════════════════════════════
-		     SECTION: Gradients
-		     ════════════════════════════════════════════ -->
-		<section id="gradients">
-			<h2 class="text-[22px] font-bold text-textdark mb-2">Gradients</h2>
-			<p class="text-[14px] text-textmuted mb-8">Key gradient backgrounds used in the dashboard.</p>
-
-			<div class="grid grid-cols-3 gap-6">
-				<div class="rounded-2xl p-6 h-32 flex flex-col justify-end bg-gradient-active">
-					<p class="text-white font-semibold text-[15px]">Active Nav</p>
-					<p class="text-white/70 text-[11px] font-mono">90deg, #07629E, #1DA0DB</p>
-				</div>
-				<div class="rounded-2xl p-6 h-32 flex flex-col justify-end interviews-bg">
-					<p class="text-white font-semibold text-[15px]">Interviews BG</p>
-					<p class="text-white/70 text-[11px] font-mono">180deg, #033E6A, #064576</p>
-				</div>
-				<div class="rounded-2xl p-6 h-32 flex flex-col justify-end" style="background: linear-gradient(135deg, #065992, #1DA0DB);">
-					<p class="text-white font-semibold text-[15px]">Stat Gradient</p>
-					<p class="text-white/70 text-[11px] font-mono">135deg, #065992, #1DA0DB</p>
-				</div>
-			</div>
 		</section>
 
 		<!-- Footer -->
-		<div class="border-t border-gray-200/50 mt-10 shrink-0">
+		<div class="border-t border-gray-200/50 mt-10">
 			<div class="py-6 flex justify-between items-center">
 				<p class="text-[13px] text-textmuted">Sales Talents Design System</p>
 				<a href="/" class="text-[13px] font-semibold text-link-blue hover:text-link-blue-hover">Back to Dashboard</a>
 			</div>
 		</div>
-	</div>
-	</div>
+
+		</div>
+	</main>
 </div>
