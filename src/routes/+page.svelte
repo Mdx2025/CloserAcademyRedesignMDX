@@ -31,36 +31,35 @@
 	<div class="flex-1 flex flex-col h-full pt-8 pl-2 pr-10 pb-6 z-10 min-h-0">
 
 		<!-- HEADER -->
-		<header class="flex flex-col gap-4 mb-6 w-full shrink-0">
+		<header class="flex justify-between items-center mb-6 w-full shrink-0">
+			<div class="flex flex-col">
+				<h1 class="text-[22px] font-bold text-textprimary tracking-tight leading-tight">Hello, MDX Agency</h1>
+				<p class="text-[14px] font-bold text-primaryblue mt-1">Monday, 25 August 2024.</p>
+			</div>
+
 			<SearchBar />
-			<div class="flex justify-between items-center w-full">
-				<div class="flex flex-col">
-					<h1 class="text-[22px] font-bold text-textprimary tracking-tight leading-tight">Hello, MDX Agency</h1>
-					<p class="text-[14px] font-bold text-primaryblue mt-1">Monday, 25 August 2024.</p>
-				</div>
 
-				<!-- Controls -->
-				<div class="flex items-center gap-4">
-					<ThemeToggle />
+			<!-- Controls -->
+			<div class="flex items-center gap-4">
+				<ThemeToggle />
 
-					<!-- Notification -->
-					<button class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-textprimary relative overflow-hidden">
-						<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
-							<defs>
-								<filter id="notif-blur" x="-20%" y="-20%" width="140%" height="140%">
-									<feGaussianBlur in="BackgroundImage" stdDeviation="14.8" />
-								</filter>
-							</defs>
-							<rect width="100%" height="100%" fill="transparent" filter="url(#notif-blur)" rx="9999" />
-						</svg>
-						<svg class="relative z-10" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-						<div class="absolute top-3 right-3.5 w-2 h-2 rounded-full bg-red-500 z-10"></div>
-					</button>
+				<!-- Notification -->
+				<button class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-textprimary relative overflow-hidden">
+					<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
+						<defs>
+							<filter id="notif-blur" x="-20%" y="-20%" width="140%" height="140%">
+								<feGaussianBlur in="BackgroundImage" stdDeviation="14.8" />
+							</filter>
+						</defs>
+						<rect width="100%" height="100%" fill="transparent" filter="url(#notif-blur)" rx="9999" />
+					</svg>
+					<svg class="relative z-10" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+					<div class="absolute top-3 right-3.5 w-2 h-2 rounded-full bg-red-500 z-10"></div>
+				</button>
 
-					<!-- Avatar -->
-					<div class="w-12 h-12 rounded-full bg-[#1F2937] flex items-center justify-center shadow-md overflow-hidden border-2 border-white cursor-pointer">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M4 22l6-15 4 8 6-15"/></svg>
-					</div>
+				<!-- Avatar -->
+				<div class="w-12 h-12 rounded-full bg-[#1F2937] flex items-center justify-center shadow-md overflow-hidden border-2 border-white cursor-pointer">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M4 22l6-15 4 8 6-15"/></svg>
 				</div>
 			</div>
 		</header>
