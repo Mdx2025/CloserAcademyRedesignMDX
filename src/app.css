@@ -634,26 +634,37 @@ body {
     justify-content: center;
   }
 
+  /* Root container: allow natural scroll on mobile */
+  .app-shell {
+    height: auto !important;
+    min-height: 100dvh;
+    overflow: visible !important;
+  }
+
   /* Main content: full width, adjusted padding */
   .main-content {
     padding: 1rem;
     padding-top: 1.25rem;
+    height: auto;
+    min-height: 0;
   }
 
-  /* Dashboard grid: single column */
+  /* Dashboard grid: single column, natural flow */
   .dashboard-grid {
     flex-direction: column;
-    overflow-y: auto;
+    overflow: visible;
     gap: 1rem;
+    height: auto;
   }
   .apps-panel {
     width: 100%;
     height: auto;
-    max-height: 420px;
+    max-height: none;
     flex-shrink: 0;
   }
   .right-column {
     width: 100%;
+    height: auto;
   }
 
   /* Metrics row: wrap on mobile */
@@ -673,14 +684,22 @@ body {
   /* Bottom row: stack */
   .bottom-row {
     flex-direction: column;
+    height: auto;
+    overflow: visible;
   }
   .calendar-col {
     width: 100%;
     flex-direction: column;
+    height: auto;
+  }
+  .interviews-section {
+    min-height: 200px;
   }
   .schedule-panel {
-    min-height: 280px;
+    min-height: 350px;
+    height: auto;
     padding: 1rem;
+    overflow: visible;
   }
 
   /* Event blocks: fit mobile width */

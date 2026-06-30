@@ -22,7 +22,7 @@
 	} from '$lib/data/dashboard.js';
 </script>
 
-<div class="w-full h-dvh bg-bgmain relative overflow-hidden flex">
+<div class="app-shell w-full h-dvh bg-bgmain relative overflow-hidden flex">
 
 	<!-- LEFT SIDEBAR (280px) -->
 	<SidebarNav active="Dashboard" />
