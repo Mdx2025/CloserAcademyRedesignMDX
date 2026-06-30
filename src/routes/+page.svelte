@@ -28,7 +28,7 @@
 	<SidebarNav active="Dashboard" />
 
 	<!-- MAIN CONTENT -->
-	<div class="flex-1 flex flex-col h-full pt-8 pl-2 pr-10 pb-6 z-10 min-h-0">
+	<div class="flex-1 flex flex-col h-full pt-6 pl-2 pr-10 pb-6 z-10 min-h-0">
 
 		<!-- HEADER -->
 		<header class="flex justify-between items-center mb-6 w-full shrink-0">

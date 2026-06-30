@@ -168,8 +168,8 @@ body {
 .schedule-line::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 70px;
+  bottom: 0;
+  left: 0;
   right: 0;
   height: 1px;
   background-color: #E2E8F0;
@@ -209,7 +209,6 @@ body {
   background: rgba(249, 249, 249, 0.20);
   box-shadow: 0 0 35.6px 4px rgba(0, 102, 146, 0.10);
   position: relative;
-  overflow: hidden;
 }
 
 /* ─── InterviewCard glassmorphism ─── */

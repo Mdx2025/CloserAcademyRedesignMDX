@@ -3,7 +3,7 @@
 	let { title, subtitle, description, location, type, linkText, linkHref = '/' } = $props();
 </script>
 
-<div class="bg-applicationcard p-6 space-y-4">
+<div class="bg-applicationcard p-6 space-y-6">
 	<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 		<defs>
 			<filter id="appcard-blur" x="-20%" y="-20%" width="140%" height="140%">
