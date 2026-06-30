@@ -93,7 +93,7 @@
 	];
 </script>
 
-<div class="h-dvh flex bg-bgmain overflow-hidden">
+<div class="flex bg-bgmain overflow-hidden">
 
 	<!-- LEFT SIDEBAR: Design System Navigation -->
 	<nav class="w-[250px] shrink-0 h-full overflow-y-auto pt-8 pb-8 px-6 border-r border-gray-200/50">
