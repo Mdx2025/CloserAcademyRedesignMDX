@@ -40,11 +40,10 @@
 </div>
 
 {:else if variant === 'blue'}
-<div class="w-fit flex rounded-md absolute z-10 px-4 py-2 bg-event-blue" style="top: {top};{left ? ` left: ${left};` : ' left: 38%;'}">
-	<div class="w-1 h-14 absolute left-[7px] top-[6px] bg-sky-500 rounded-full"></div>
+<div class="w-fit flex rounded-md absolute z-10 px-4 py-2 bg-event-blue space-y-2" style="top: {top};{left ? ` left: ${left};` : ' left: 38%;'}">
+	<div class="w-1 h-14 absolute left-[7px] top-1/2 -translate-y-1/2 bg-sky-500 rounded-full"></div>
 	<div class="flex items-center gap-3 w-full">
 		<div class="text-sky-500 text-lg font-normal">{title}</div>
-		<img src="/avatar-event.svg" alt="Avatar" class="w-[26px] h-[26px] rounded-full ml-auto" />
 	</div>
 	<div class="flex items-center gap-1.5">
 		<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -53,5 +52,6 @@
 		</svg>
 		<span class="text-white text-sm font-normal">{time}</span>
 	</div>
+	<img src="/avatar-event.svg" alt="Avatar" class="w-[26px] h-[26px] rounded-full" />
 </div>
 {/if}
