@@ -155,7 +155,7 @@
 						<CalendarWidget />
 
 						<!-- Upcoming Interviews (from Figma spec) -->
-						<div class="w-full flex-1 relative bg-sky-700/60 rounded-3xl backdrop-blur-[5px] overflow-hidden">
+						<div class="w-full flex-1 relative interviews-bg rounded-3xl overflow-hidden">
 							<div class="absolute flex gap-[6.14px] right-5 top-[25px]">
 								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
 								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>

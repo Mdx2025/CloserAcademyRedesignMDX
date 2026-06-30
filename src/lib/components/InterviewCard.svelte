@@ -3,18 +3,7 @@
 	let { date, time, description, location, type } = $props();
 </script>
 
-<div class="rounded-2xl p-5 relative group cursor-pointer hover:brightness-110 transition-all overflow-hidden">
-	<!-- SVG filter blur background layer -->
-	<svg class="absolute inset-0 w-full h-full" aria-hidden="true">
-		<defs>
-			<filter id="interview-blur" x="-20%" y="-20%" width="140%" height="140%">
-				<feGaussianBlur stdDeviation="5" />
-			</filter>
-		</defs>
-		<rect width="100%" height="100%" fill="rgba(0, 102, 146, 0.61)" filter="url(#interview-blur)" rx="16" />
-	</svg>
-	<div class="absolute inset-0 rounded-2xl bg-[rgba(0,102,146,0.61)]"></div>
-
+<div class="rounded-2xl p-5 relative group cursor-pointer hover:brightness-110 transition-all overflow-hidden" style="background: rgba(255, 255, 255, 0.10); backdrop-filter: blur(50.85px);">
 	<!-- Content -->
 	<div class="relative z-10">
 		<div class="flex gap-3 mb-4">

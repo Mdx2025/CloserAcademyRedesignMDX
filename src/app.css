@@ -108,7 +108,18 @@ body {
 }
 
 .interviews-bg {
-  background: linear-gradient(180deg, #033E6A 0%, #064576 100%);
+  background: linear-gradient(180deg, #033E6A 0%, #064576 100%) padding-box,
+              url('/interviews-stars.svg') center / cover no-repeat;
+  background-blend-mode: normal;
+  position: relative;
+}
+.interviews-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/interviews-stars.svg') center / cover no-repeat;
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 /* ─── Stat card backgrounds (Figma-exact gradients) ─── */
