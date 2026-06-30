@@ -211,6 +211,14 @@ body {
   position: relative;
 }
 
+/* ─── ProfileCard switch container ─── */
+.bg-switch {
+  border-radius: 20px;
+  background: #D6E2E8;
+  box-shadow: 0 0 37.5px 0 rgba(0, 102, 146, 0.08);
+  backdrop-filter: blur(5px);
+}
+
 /* ─── InterviewCard glassmorphism ─── */
 .bg-interview {
   background: rgba(255, 255, 255, 0.10);

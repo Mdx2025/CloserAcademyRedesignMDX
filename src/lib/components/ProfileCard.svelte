@@ -13,7 +13,7 @@
 		<div class="flex flex-col">
 			<h3 class="text-[20px] font-bold text-textprimary leading-tight">{name}</h3>
 			<p class="text-[14px] text-[rgba(0,17,25,0.43)] mt-1">{subtitle}</p>
-			<div class="flex items-center justify-between mt-4">
+			<div class="w-fit bg-switch flex flex-row items-center gap-4 px-4 py-4 mt-4">
 				<span class="text-[14px] font-bold text-primaryblue">Open to work</span>
 				<!-- Toggle Switch -->
 				<div class="w-[42px] h-[22px] rounded-full flex items-center px-[3px] cursor-pointer shadow-inner relative"

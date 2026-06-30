@@ -2,7 +2,7 @@
 	let mode = $state('light');
 </script>
 
-<div class="flex items-center bg-secondary rounded-full p-1 relative overflow-hidden">
+<div class="flex items-center bg-secondary rounded-full p-1 relative overflow-hidden cursor-pointer">
 	<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 		<defs>
 			<filter id="toggle-blur" x="-20%" y="-20%" width="140%" height="140%">

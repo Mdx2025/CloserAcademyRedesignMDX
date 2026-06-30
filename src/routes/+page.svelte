@@ -40,7 +40,7 @@
 			<SearchBar />
 
 			<!-- Controls -->
-			<div class="flex items-center gap-4">
+			<div class="flex items-center gap-3">
 				<ThemeToggle />
 
 				<!-- Notification -->
@@ -58,7 +58,7 @@
 				</button>
 
 				<!-- Avatar -->
-				<div class="w-12 h-12 rounded-full bg-[#1F2937] flex items-center justify-center shadow-md overflow-hidden border-2 border-white cursor-pointer">
+				<div class="w-12 h-12 rounded-full bg-[#1F2937] flex items-center justify-center shadow-md overflow-hidden cursor-pointer">
 					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M4 22l6-15 4 8 6-15"/></svg>
 				</div>
 			</div>
