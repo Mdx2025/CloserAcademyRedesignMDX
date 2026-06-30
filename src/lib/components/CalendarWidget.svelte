@@ -11,7 +11,7 @@
 	} = $props();
 </script>
 
-<div class="bg-[#d5e5ec] rounded-[25px] p-6 shadow-blue-soft shrink-0">
+<div class="bg-[#d5e5ec] rounded-[25px] p-6 shrink-0 backdrop-blur-[5px]" style="box-shadow: 0px 0px 37.5px 0px rgba(0, 102, 146, 0.08);">
 	<div class="flex items-center justify-center gap-4 mb-6">
 		<button class="text-textdark hover:text-black">
 			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>

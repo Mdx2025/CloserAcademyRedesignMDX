@@ -60,11 +60,10 @@
 		</header>
 
 		<!-- DASHBOARD GRID -->
-		<div class="flex-1 flex gap-6 w-full min-h-0">
+		<div class="flex-1 flex gap-5 w-full min-h-0">
 
-			<!-- LEFT COLUMN: My Applications (460px) -->
-			<div class="w-[30%] max-w-[480px] min-w-[350px] h-full flex flex-col shrink-0 rounded-[30px] p-6 relative overflow-hidden" style="background: rgba(249, 249, 249, 0.20); box-shadow: 0 0 49.9px -8px rgba(0, 102, 146, 0.15);">
-				<!-- SVG filter blur (replaces backdrop-filter) -->
+			<!-- LEFT COLUMN: My Applications -->
+			<div class="w-[33%] max-w-[500px] min-w-[350px] h-full flex flex-col shrink-0 rounded-[30px] p-6 relative overflow-hidden" style="background: rgba(249, 249, 249, 0.20); box-shadow: 0 0 49.9px -8px rgba(0, 102, 146, 0.15);">
 				<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 					<defs>
 						<filter id="apps-panel-blur" x="-10%" y="-10%" width="120%" height="120%">
@@ -79,7 +78,6 @@
 					<p class="text-[14px] font-bold text-[rgba(0,17,25,0.43)] mt-1">Lorem ipsum dolor et same</p>
 				</div>
 
-				<!-- Cards Container (scrollable) -->
 				<div class="flex flex-col gap-4 overflow-y-auto pb-2 flex-1 min-h-0 relative z-10">
 					{#each applicationCards as card, i}
 						<ApplicationCard
@@ -98,7 +96,7 @@
 			<div class="flex-1 flex flex-col gap-4 h-full min-w-0">
 
 				<!-- TOP METRICS ROW -->
-				<div class="flex gap-4 h-[140px] shrink-0">
+				<div class="flex gap-4 h-[155px] shrink-0">
 
 					<ProfileCard />
 
@@ -128,7 +126,7 @@
 				<div class="flex gap-4 flex-1 min-h-0">
 
 					<!-- Calendar & Interviews Column -->
-					<div class="w-[340px] flex flex-col gap-4 shrink-0 h-full">
+					<div class="w-[399px] flex flex-col gap-4 shrink-0 h-full">
 
 						<CalendarWidget />
 
@@ -156,7 +154,7 @@
 					</div>
 
 					<!-- DAILY SCHEDULE BLOCK -->
-					<div class="flex-1 bg-surface rounded-[25px] p-8 shadow-[0px_0px_37.5px_0px_rgba(0,102,146,0.08)] flex flex-col relative h-full overflow-hidden">
+					<div class="flex-1 bg-surface rounded-[25px] p-8 flex flex-col relative h-full overflow-hidden" style="box-shadow: 0px 0px 37.5px 0px rgba(0, 102, 146, 0.08);">
 
 						<!-- Header -->
 						<div class="flex justify-between items-center mb-6 shrink-0 relative z-20">

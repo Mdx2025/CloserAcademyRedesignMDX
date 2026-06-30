@@ -104,24 +104,24 @@ body {
 
 /* ─── Gradient utilities ─── */
 .bg-gradient-active {
-  background: linear-gradient(90deg, #07629E 0%, #1DA0DB 100%);
+  background: linear-gradient(90deg, #006692 0%, #1497df 100%);
 }
 
 .interviews-bg {
   background: linear-gradient(180deg, #033E6A 0%, #064576 100%);
 }
 
-/* ─── Stat card backgrounds ─── */
+/* ─── Stat card backgrounds (Figma-exact gradients) ─── */
 .stat-card-1 {
-  background: linear-gradient(236deg, #0269AD 4.97%, #004075 95.25%);
+  background: linear-gradient(230.81deg, rgb(2, 105, 173) 4.97%, rgb(0, 64, 117) 95.25%);
   box-shadow: 0 0 23.6px 0 rgba(38, 67, 95, 0.24);
 }
 .stat-card-2 {
-  background: linear-gradient(304deg, #34A3D3 11.1%, #006692 95.11%);
+  background: linear-gradient(-50.24deg, rgb(52, 163, 211) 11.1%, rgb(0, 102, 146) 95.11%);
   box-shadow: 0 0 23.6px 0 rgba(38, 67, 95, 0.24);
 }
 .stat-card-3 {
-  background: linear-gradient(302deg, #1497DF 8.15%, #156794 100.55%);
+  background: linear-gradient(-52.49deg, rgb(20, 151, 223) 8.15%, rgb(21, 103, 148) 100.55%);
   box-shadow: 0 0 23.6px 0 rgba(38, 67, 95, 0.24);
 }
 
