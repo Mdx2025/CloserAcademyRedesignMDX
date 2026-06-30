@@ -63,7 +63,7 @@
 		<div class="flex-1 flex gap-5 w-full min-h-0">
 
 			<!-- LEFT COLUMN: My Applications -->
-			<div class="w-[33%] max-w-[500px] min-w-[350px] h-full flex flex-col shrink-0 rounded-[30px] p-6 relative overflow-hidden" style="background: rgba(249, 249, 249, 0.20); box-shadow: 0 0 49.9px -8px rgba(0, 102, 146, 0.15);">
+			<div class="w-[33%] max-w-[500px] min-w-[350px] h-full flex flex-col shrink-0 bg-primary rounded-[30px] p-6 relative overflow-hidden">
 				<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 					<defs>
 						<filter id="apps-panel-blur" x="-10%" y="-10%" width="120%" height="120%">
@@ -96,7 +96,15 @@
 			<div class="flex-1 flex flex-col gap-4 h-full min-w-0">
 
 				<!-- TOP METRICS ROW -->
-				<div class="flex gap-4 h-[155px] shrink-0">
+				<div class="flex gap-4 h-fit shrink-0 bg-primary rounded-[30px] p-6 relative overflow-hidden">
+					<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
+						<defs>
+							<filter id="metrics-panel-blur" x="-10%" y="-10%" width="120%" height="120%">
+								<feGaussianBlur in="BackgroundImage" stdDeviation="5" />
+							</filter>
+						</defs>
+						<rect width="100%" height="100%" fill="rgba(249, 249, 249, 0.20)" filter="url(#metrics-panel-blur)" rx="30" />
+					</svg>
 
 					<ProfileCard />
 
@@ -126,12 +134,12 @@
 				<div class="flex gap-4 flex-1 min-h-0">
 
 					<!-- Calendar & Interviews Column -->
-					<div class="w-96 flex flex-col gap-4 shrink-0 h-full">
+					<div class="w-sm flex flex-col gap-4 shrink-0 h-full">
 
 						<CalendarWidget />
 
 						<!-- Upcoming Interviews (from Figma spec) -->
-						<div class="w-96 flex-1 relative bg-sky-700/60 rounded-3xl backdrop-blur-[5px] overflow-hidden">
+						<div class="w-fit flex-1 relative bg-sky-700/60 rounded-3xl backdrop-blur-[5px] overflow-hidden">
 							<div class="absolute flex gap-[6.14px] right-5 top-[25px]">
 								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
 								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
@@ -182,7 +190,7 @@
 					</div>
 
 					<!-- DAILY SCHEDULE BLOCK -->
-					<div class="w-[600px] bg-surface rounded-[25px] p-8 flex flex-col relative h-full overflow-hidden shrink-0" style="box-shadow: 0px 0px 37.5px 0px rgba(0, 102, 146, 0.08);">
+					<div class="flex-1 bg-surface rounded-[25px] p-8 flex flex-col relative h-full overflow-hidden" style="box-shadow: 0px 0px 37.5px 0px rgba(0, 102, 146, 0.08);">
 
 						<!-- Header -->
 						<div class="flex justify-between items-center mb-6 shrink-0 relative z-20">

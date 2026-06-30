@@ -19,6 +19,19 @@
 	};
 </script>
 
+{#if variant === 'blue'}
+<div class="w-60 h-24 absolute z-10" style="top: {top};{left ? ` left: ${left};` : ' left: 180px;'}">
+	<div class="w-60 h-24 left-0 top-0 absolute bg-blue-400 rounded-xl"></div>
+	<div class="size-3.5 left-[27px] top-[35px] absolute">
+		<div class="size-3 left-[1.17px] top-[1.17px] absolute outline outline-[1.50px] outline-offset-[-0.75px] outline-white"></div>
+		<div class="w-[2.38px] h-1 left-[6.78px] top-[4.38px] absolute outline outline-[1.50px] outline-offset-[-0.75px] outline-white"></div>
+		<div class="size-3.5 left-0 top-0 absolute opacity-0"></div>
+	</div>
+	<div class="left-[46px] top-[35px] absolute justify-start text-white text-sm font-normal">{time}</div>
+	<div class="w-40 left-[27px] top-[11px] absolute justify-start text-sky-500 text-lg font-normal">{title}</div>
+	<div class="w-1 h-20 left-[7.52px] top-[6.28px] absolute bg-sky-500"></div>
+</div>
+{:else}
 <div
 	class="event-block event-{variant}"
 	style="top: {top}; height: {height};{left ? ` left: ${left};` : ''}"
@@ -26,7 +39,6 @@
 	<div class="absolute left-0 top-0 bottom-0 w-1.5 rounded-l-xl opacity-80" style="background-color: {accentColors[variant].bar}"></div>
 
 	{#if variant === 'pink' && !avatars}
-		<!-- Compact single-line layout for pink/morning -->
 		<div class="flex items-center gap-3">
 			<span class="font-semibold ml-2 text-[15px]" style="color: {accentColors[variant].text}">{title}</span>
 			<div class="flex items-center gap-1.5 text-[13px] font-medium" style="color: {accentColors[variant].text}">
@@ -49,3 +61,4 @@
 		{/if}
 	{/if}
 </div>
+{/if}

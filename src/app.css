@@ -125,6 +125,13 @@ body {
   box-shadow: 0 0 23.6px 0 rgba(38, 67, 95, 0.24);
 }
 
+/* ─── Primary panel background (glassmorphism) ─── */
+.bg-primary {
+  border-radius: 30px;
+  background: rgba(249, 249, 249, 0.20);
+  box-shadow: 0 0 49.9px -8px rgba(0, 102, 146, 0.15);
+}
+
 /* ─── Calendar background ─── */
 .calendar-bg { background-color: var(--color-calendarbg); }
 
