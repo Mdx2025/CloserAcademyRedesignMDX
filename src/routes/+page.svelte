@@ -126,35 +126,63 @@
 				<div class="flex gap-4 flex-1 min-h-0">
 
 					<!-- Calendar & Interviews Column -->
-					<div class="w-[399px] flex flex-col gap-4 shrink-0 h-full">
+					<div class="w-96 flex flex-col gap-4 shrink-0 h-full">
 
 						<CalendarWidget />
 
-						<!-- Upcoming Interviews -->
-						<div class="interviews-bg rounded-[25px] p-6 flex-1 flex flex-col shadow-card relative overflow-hidden">
-							<div class="flex justify-between items-center mb-6">
-								<h3 class="text-[20px] font-semibold text-white tracking-tight">Upcoming interviews</h3>
-								<button class="text-white/60 hover:text-white pb-2">
-									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>
-								</button>
+						<!-- Upcoming Interviews (from Figma spec) -->
+						<div class="w-96 flex-1 relative bg-sky-700/60 rounded-3xl backdrop-blur-[5px] overflow-hidden">
+							<div class="absolute flex gap-[6.14px] right-5 top-[25px]">
+								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
+								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
+								<div class="w-[2.73px] h-[2.88px] bg-white/50 rounded-full"></div>
+							</div>
+							<p class="absolute left-5 top-[25px] text-white text-xl font-normal">Upcoming interviews</p>
+
+							<!-- Interview 1 -->
+							<div class="absolute left-5 right-5 top-[60px] h-36 bg-white/10 rounded-2xl backdrop-blur-[50.85px]"></div>
+							<div class="absolute left-[39px] top-[75px] w-28 h-7 bg-white/20 rounded-md flex items-center justify-center">
+								<span class="text-white text-sm">10-07-2025</span>
+							</div>
+							<div class="absolute left-[153px] top-[75px] w-20 h-7 bg-white/20 rounded-md flex items-center justify-center">
+								<span class="text-white text-sm">02:00 PM</span>
+							</div>
+							<p class="absolute left-[41px] top-[122px] w-60 text-white/40 text-sm leading-snug">Lorem ipsum dolor et same dolor et ipsum dolor lorem ipsum dolor...</p>
+							<div class="absolute left-[39px] top-[166px] flex items-center gap-2">
+								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+								<span class="text-white text-sm">Remote</span>
+								<div class="w-0 h-3.5 border-l border-white ml-2 mr-2"></div>
+								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+								<span class="text-white text-sm">Full Time</span>
+							</div>
+							<div class="absolute right-[25px] top-[152px] size-9 bg-white/30 rounded-full flex items-center justify-center">
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg>
 							</div>
 
-							<div class="flex flex-col gap-4 overflow-y-auto">
-								{#each interviewCards as interview}
-									<InterviewCard
-										date={interview.date}
-										time={interview.time}
-										description={interview.description}
-										location={interview.location}
-										type={interview.type}
-									/>
-								{/each}
+							<!-- Interview 2 -->
+							<div class="absolute left-5 right-5 top-[210px] h-36 bg-white/10 rounded-2xl backdrop-blur-[50.85px]"></div>
+							<div class="absolute left-[39px] top-[225px] w-28 h-7 bg-white/20 rounded-md flex items-center justify-center">
+								<span class="text-white text-sm">10-07-2025</span>
+							</div>
+							<div class="absolute left-[153px] top-[225px] w-20 h-7 bg-white/20 rounded-md flex items-center justify-center">
+								<span class="text-white text-sm">02:00 PM</span>
+							</div>
+							<p class="absolute left-[41px] top-[272px] w-60 text-white/40 text-sm leading-snug">Lorem ipsum dolor et same dolor et ipsum dolor lorem ipsum dolor...</p>
+							<div class="absolute left-[39px] top-[316px] flex items-center gap-2">
+								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+								<span class="text-white text-sm">Remote</span>
+								<div class="w-0 h-3.5 border-l border-white ml-2 mr-2"></div>
+								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+								<span class="text-white text-sm">Full Time</span>
+							</div>
+							<div class="absolute right-[25px] top-[302px] size-9 bg-white/30 rounded-full flex items-center justify-center">
+								<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="5" y1="19" x2="19" y2="5"/><polyline points="9 5 19 5 19 15"/></svg>
 							</div>
 						</div>
 					</div>
 
 					<!-- DAILY SCHEDULE BLOCK -->
-					<div class="flex-1 bg-surface rounded-[25px] p-8 flex flex-col relative h-full overflow-hidden" style="box-shadow: 0px 0px 37.5px 0px rgba(0, 102, 146, 0.08);">
+					<div class="w-[600px] bg-surface rounded-[25px] p-8 flex flex-col relative h-full overflow-hidden shrink-0" style="box-shadow: 0px 0px 37.5px 0px rgba(0, 102, 146, 0.08);">
 
 						<!-- Header -->
 						<div class="flex justify-between items-center mb-6 shrink-0 relative z-20">

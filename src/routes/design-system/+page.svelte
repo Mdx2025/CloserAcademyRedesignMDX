@@ -12,8 +12,6 @@
 	import ScheduleEvent from '$lib/components/ScheduleEvent.svelte';
 	import ProfileCard from '$lib/components/ProfileCard.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	import SidebarNav from '$lib/components/SidebarNav.svelte';
-
 	/* ── Color swatches ── */
 	const colors = [
 		{ name: 'Primary Dark', token: '--color-textprimary', hex: '#001119', dark: true },
@@ -102,23 +100,47 @@
 
 <div class="w-full h-dvh bg-bgmain flex overflow-hidden">
 
-	<!-- LEFT SIDEBAR -->
-	<SidebarNav active="" />
+	<!-- LEFT SIDEBAR: Design System Navigation -->
+	<nav class="w-[250px] h-full flex flex-col pt-8 pb-8 px-6 border-r border-gray-200/50 shrink-0 overflow-y-auto">
+		<a href="/" class="flex items-center gap-2 mb-8 text-link-blue hover:text-link-blue-hover">
+			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+			<span class="text-[14px] font-semibold">Dashboard</span>
+		</a>
+
+		<h2 class="text-[20px] font-bold text-textprimary mb-6">Design System</h2>
+
+		<p class="text-[11px] font-black text-[rgba(0,17,25,0.4)] mb-3 tracking-wider uppercase">Tokens</p>
+		<div class="flex flex-col gap-1 mb-6">
+			<a href="#colors" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">Colors</a>
+			<a href="#typography" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">Typography</a>
+			<a href="#spacing" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">Spacing</a>
+			<a href="#radius" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">Border Radius</a>
+			<a href="#shadows" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">Shadows</a>
+			<a href="#gradients" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">Gradients</a>
+		</div>
+
+		<p class="text-[11px] font-black text-[rgba(0,17,25,0.4)] mb-3 tracking-wider uppercase">Components</p>
+		<div class="flex flex-col gap-1">
+			<a href="#buttons" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">Buttons & Links</a>
+			<a href="#theme-toggle" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">ThemeToggle</a>
+			<a href="#search-bar" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">SearchBar</a>
+			<a href="#profile-card" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">ProfileCard</a>
+			<a href="#stat-card" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">StatCard</a>
+			<a href="#app-card" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">ApplicationCard</a>
+			<a href="#interview-card" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">InterviewCard</a>
+			<a href="#calendar" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">CalendarWidget</a>
+			<a href="#schedule" class="text-[15px] font-medium text-textdark hover:text-primaryblue py-2 px-3 rounded-lg hover:bg-white/50 transition-colors">ScheduleEvent</a>
+		</div>
+	</nav>
 
 	<!-- MAIN CONTENT -->
 	<div class="flex-1 flex flex-col h-full overflow-hidden">
 
 		<!-- Page Header -->
 		<div class="border-b border-gray-200/50 bg-white/80 backdrop-blur-md shrink-0 z-50">
-			<div class="px-10 py-5 flex items-center justify-between">
-				<div>
-					<h1 class="text-[22px] font-bold text-textprimary tracking-tight">Design System</h1>
-					<p class="text-[14px] text-textmuted mt-1">Tokens, Components & Variants</p>
-				</div>
-				<a href="/" class="text-[14px] font-semibold text-link-blue hover:text-link-blue-hover flex items-center gap-1.5">
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-					Back to Dashboard
-				</a>
+			<div class="px-10 py-5">
+				<h1 class="text-[22px] font-bold text-textprimary tracking-tight">Design System</h1>
+				<p class="text-[14px] text-textmuted mt-1">Tokens, Components & Variants</p>
 			</div>
 		</div>
 
@@ -127,7 +149,7 @@
 		<!-- ════════════════════════════════════════════
 		     SECTION: Colors
 		     ════════════════════════════════════════════ -->
-		<section>
+		<section id="colors">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Colors</h2>
 			<p class="text-[14px] text-textmuted mb-8">All color tokens from Figma, defined in <code class="text-[13px] bg-gray-100 px-1.5 py-0.5 rounded">@theme</code></p>
 
@@ -150,7 +172,7 @@
 		<!-- ════════════════════════════════════════════
 		     SECTION: Typography
 		     ════════════════════════════════════════════ -->
-		<section>
+		<section id="typography">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Typography</h2>
 			<p class="text-[14px] text-textmuted mb-8">Inter, weights 300--800. All sizes from the Figma file.</p>
 
@@ -183,7 +205,7 @@
 		<!-- ════════════════════════════════════════════
 		     SECTION: Spacing
 		     ════════════════════════════════════════════ -->
-		<section>
+		<section id="spacing">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Spacing</h2>
 			<p class="text-[14px] text-textmuted mb-8">Visual spacing scale used throughout the dashboard.</p>
 
@@ -200,7 +222,7 @@
 		<!-- ════════════════════════════════════════════
 		     SECTION: Border Radius
 		     ════════════════════════════════════════════ -->
-		<section>
+		<section id="radius">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Border Radius</h2>
 			<p class="text-[14px] text-textmuted mb-8">Radius tokens from the Figma design spec.</p>
 
@@ -221,7 +243,7 @@
 		<!-- ════════════════════════════════════════════
 		     SECTION: Shadows
 		     ════════════════════════════════════════════ -->
-		<section>
+		<section id="shadows">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Shadows</h2>
 			<p class="text-[14px] text-textmuted mb-8">Box-shadow tokens extracted from Figma.</p>
 
@@ -242,12 +264,12 @@
 		<!-- ════════════════════════════════════════════
 		     SECTION: Components
 		     ════════════════════════════════════════════ -->
-		<section>
+		<section id="components">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Components</h2>
 			<p class="text-[14px] text-textmuted mb-8">All reusable Svelte 5 components with their variants.</p>
 
 			<!-- ── Buttons & Links ── -->
-			<div class="mb-16">
+			<div id="buttons" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">Buttons & Links</h3>
 				<div class="flex items-center gap-4 flex-wrap">
 					<!-- Active nav button -->
@@ -274,7 +296,7 @@
 			</div>
 
 			<!-- ── ThemeToggle ── -->
-			<div class="mb-16">
+			<div id="theme-toggle" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">ThemeToggle</h3>
 				<div class="flex items-center gap-8">
 					<div>
@@ -285,7 +307,7 @@
 			</div>
 
 			<!-- ── SearchBar ── -->
-			<div class="mb-16">
+			<div id="search-bar" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">SearchBar</h3>
 				<div class="bg-bgmain p-8 rounded-2xl">
 					<SearchBar placeholder="Search jobs, interviews..." />
@@ -293,7 +315,7 @@
 			</div>
 
 			<!-- ── ProfileCard ── -->
-			<div class="mb-16">
+			<div id="profile-card" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">ProfileCard</h3>
 				<div class="bg-bgmain p-8 rounded-2xl flex gap-6">
 					<div>
@@ -308,7 +330,7 @@
 			</div>
 
 			<!-- ── StatCard ── -->
-			<div class="mb-16">
+			<div id="stat-card" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">StatCard</h3>
 				<p class="text-[13px] text-textmuted mb-4">Three color variants: stat1, stat2, stat3</p>
 				<div class="flex gap-6 h-[150px]">
@@ -331,7 +353,7 @@
 			</div>
 
 			<!-- ── ApplicationCard ── -->
-			<div class="mb-16">
+			<div id="app-card" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">ApplicationCard</h3>
 				<div class="grid grid-cols-2 gap-6 max-w-[960px]">
 					<ApplicationCard
@@ -354,7 +376,7 @@
 			</div>
 
 			<!-- ── InterviewCard ── -->
-			<div class="mb-16">
+			<div id="interview-card" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">InterviewCard</h3>
 				<p class="text-[13px] text-textmuted mb-4">Glassmorphism cards used in the dark Upcoming Interviews section</p>
 				<div class="interviews-bg rounded-2xl p-8 max-w-[400px]">
@@ -378,7 +400,7 @@
 			</div>
 
 			<!-- ── CalendarWidget ── -->
-			<div class="mb-16">
+			<div id="calendar" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">CalendarWidget</h3>
 				<div class="max-w-[360px]">
 					<CalendarWidget month="July" year={2024} highlightedDay={19} />
@@ -386,7 +408,7 @@
 			</div>
 
 			<!-- ── ScheduleEvent ── -->
-			<div class="mb-16">
+			<div id="schedule" class="mb-16">
 				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">ScheduleEvent</h3>
 				<p class="text-[13px] text-textmuted mb-4">Three color variants: pink, green, blue. Positioned absolutely within the schedule timeline.</p>
 				<div class="relative h-[300px] bg-gray-50 rounded-2xl p-8 border border-gray-100 overflow-hidden">
@@ -420,26 +442,12 @@
 				</div>
 			</div>
 
-			<!-- ── SidebarNav ── -->
-			<div class="mb-16">
-				<h3 class="text-[18px] font-bold text-textdark mb-6 pb-2 border-b border-gray-200">SidebarNav</h3>
-				<p class="text-[13px] text-textmuted mb-4">Full sidebar with active state. Pass <code class="text-[13px] bg-gray-100 px-1.5 py-0.5 rounded">active</code> prop to highlight.</p>
-				<div class="flex gap-6 bg-bgmain rounded-2xl p-4 overflow-hidden">
-					<div class="h-[600px] bg-bgmain rounded-xl overflow-hidden">
-						<SidebarNav active="Dashboard" />
-					</div>
-					<div class="h-[600px] bg-bgmain rounded-xl overflow-hidden">
-						<SidebarNav active="Jobs" />
-					</div>
-				</div>
-			</div>
-
 		</section>
 
 		<!-- ════════════════════════════════════════════
 		     SECTION: Gradients
 		     ════════════════════════════════════════════ -->
-		<section>
+		<section id="gradients">
 			<h2 class="text-[22px] font-bold text-textdark mb-2">Gradients</h2>
 			<p class="text-[14px] text-textmuted mb-8">Key gradient backgrounds used in the dashboard.</p>
 
