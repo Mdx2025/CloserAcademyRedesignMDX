@@ -3,7 +3,7 @@
 	let { date, time, description, location, type } = $props();
 </script>
 
-<div class="bg-interview rounded-2xl p-4 relative group cursor-pointer hover:brightness-110 transition-all overflow-hidden">
+<div class="bg-interview rounded-2xl p-4 relative group cursor-pointer hover:brightness-110 transition-all overflow-hidden shrink-0">
 	<svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true" style="z-index: 0;">
 		<defs>
 			<filter id="interview-blur" x="-20%" y="-20%" width="140%" height="140%">

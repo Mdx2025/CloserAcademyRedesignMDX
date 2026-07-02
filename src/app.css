@@ -212,8 +212,10 @@ body {
    RESPONSIVE — desktop-first from 1920 base
    ═══════════════════════════════════════════════ */
 
-/* ── ≤1536px: tighten gaps, reduce sidebar + panels ── */
-@media (max-width: 1536px) {
+/* ── ≤1800px: first compaction tier — covers the 1537–1919 gap where the
+   1920-base fixed columns (sidebar + apps-panel + calendar-col) overflowed
+   ~100px horizontally on 1680-class laptops. Narrower tiers below still win. ── */
+@media (max-width: 1800px) {
   .sidebar-nav {
     width: 200px;
     padding-left: 1rem;
@@ -505,29 +507,48 @@ body {
   display: none;
 }
 
-/* ── ≤1024px: stack layout vertically ── */
+/* ── ≤1024px: stack layout vertically, natural page scroll ── */
 @media (max-width: 1024px) {
+  /* Tablet flows like a document instead of a fixed-height dashboard:
+     the desktop h-dvh + internal-scroll model clipped the schedule panel
+     (~300px cut) and left a 56px viewport overflow. Natural flow shows every
+     section by scrolling the page. */
+  .app-shell {
+    height: auto !important;
+    min-height: 100dvh;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+  }
+  .main-content {
+    height: auto;
+    min-height: 0;
+  }
   .dashboard-grid {
     flex-direction: column;
-    overflow-y: auto;
+    overflow: visible;
+    height: auto;
   }
   .apps-panel {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: none;
     flex-shrink: 0;
   }
   .right-column {
     width: 100%;
-    min-height: 600px;
+    height: auto;
+    min-height: 0;
   }
   .bottom-row {
     flex-direction: column;
+    height: auto;
+    overflow: visible;
   }
   .calendar-col {
     width: 100%;
     flex-direction: row;
     gap: 0.75rem;
+    height: auto;
   }
   /* Calendar + interviews share the row; without this both are w-full (200%)
      and the interviews content overflows and gets clipped on the right. */
@@ -536,7 +557,9 @@ body {
     min-width: 0;
   }
   .schedule-panel {
-    min-height: 300px;
+    min-height: 480px;
+    height: auto;
+    overflow: visible;
   }
   .metrics-row {
     flex-wrap: wrap;
@@ -613,7 +636,10 @@ body {
      being pushed wider by its content (caused ~11px horizontal scroll). */
   .main-content {
     padding: 1rem;
-    padding-top: 1.25rem;
+    padding-top: max(1.25rem, env(safe-area-inset-top));
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
     height: auto;
     min-height: 0;
     min-width: 0;

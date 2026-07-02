@@ -14,7 +14,7 @@
 	</svg>
 
 	<!-- More button -->
-	<button class="absolute top-6 right-5 text-gray-400 hover:text-gray-600 z-10">
+	<button class="absolute top-6 right-5 text-gray-400 hover:text-gray-600 z-20">
 		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
 	</button>
 
