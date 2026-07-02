@@ -15,7 +15,7 @@
 
 {#if variant === 'green'}
 <div class="w-fit flex rounded-md absolute z-10 px-4 py-2 bg-event-green" style="top: {top};{left ? ` left: ${left};` : ' left: 38%;'}">
-	<div class="w-1 h-14 absolute left-[7px] top-[6px] bg-lime-500 rounded-full"></div>
+	<div class="w-1 m-0 absolute left-[7px] top-2 bottom-2 bg-lime-500 rounded-full"></div>
 	<div class="text-lime-500 text-lg font-normal">{title}</div>
 	<div class="flex items-center gap-1.5">
 		<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -28,7 +28,7 @@
 
 {:else if variant === 'pink'}
 <div class="w-fit flex rounded-md absolute z-10 px-4 py-2 bg-event-pink" style="top: {top};{left ? ` left: ${left};` : ' left: 38%;'}">
-	<div class="w-1 h-10 absolute left-[7px] top-1/2 -translate-y-1/2 bg-event-pink-accent rounded-full"></div>
+	<div class="w-1 m-0 absolute left-[7px] top-2 bottom-2 bg-event-pink-accent rounded-full"></div>
 	<span class="text-event-pink-accent text-[15px] font-semibold ml-4">{title}</span>
 	<div class="flex items-center gap-1.5 ml-3">
 		<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -41,7 +41,7 @@
 
 {:else if variant === 'blue'}
 <div class="w-fit flex rounded-md absolute z-10 px-4 py-2 bg-event-blue space-y-2" style="top: {top};{left ? ` left: ${left};` : ' left: 38%;'}">
-	<div class="w-1 h-14 absolute left-[7px] top-1/2 -translate-y-1/2 bg-sky-500 rounded-full"></div>
+	<div class="w-1 m-0 absolute left-[7px] top-2 bottom-2 bg-sky-500 rounded-full"></div>
 	<div class="flex items-center gap-3 w-full">
 		<div class="text-sky-500 text-lg font-normal">{title}</div>
 	</div>

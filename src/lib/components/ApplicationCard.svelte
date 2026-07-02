@@ -24,21 +24,21 @@
 		<p class="text-[13px] text-gray-400 leading-relaxed line-clamp-2">{description}</p>
 	</div>
 
-	<div class="flex items-center justify-between relative z-10">
-		<div class="flex items-center gap-4">
-			<div class="flex items-center gap-1.5 text-[13px] font-semibold text-textdark">
-				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+	<div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 relative z-10">
+		<div class="flex items-center gap-3 min-w-0">
+			<div class="flex items-center gap-1.5 text-[13px] font-semibold text-textdark whitespace-nowrap">
+				<svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
 				{location}
 			</div>
 			<span class="text-gray-300">|</span>
-			<div class="flex items-center gap-1.5 text-[13px] font-semibold text-textdark">
-				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+			<div class="flex items-center gap-1.5 text-[13px] font-semibold text-textdark whitespace-nowrap">
+				<svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
 				{type}
 			</div>
 		</div>
-		<a href={linkHref} class="flex items-center gap-1 text-[13px] font-semibold text-link-blue hover:text-link-blue-hover">
+		<a href={linkHref} class="flex items-center gap-1 text-[13px] font-semibold text-link-blue hover:text-link-blue-hover whitespace-nowrap shrink-0">
 			{linkText}
-			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+			<svg class="shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
 		</a>
 	</div>
 </div>

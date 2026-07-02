@@ -175,33 +175,6 @@ body {
   z-index: 1;
 }
 
-/* ─── Event blocks (absolute within schedule) ─── */
-.event-block {
-  position: absolute;
-  left: 180px;
-  border-radius: 12px;
-  padding: 12px 16px;
-  z-index: 10;
-  width: 320px;
-}
-
-/* Event color variants */
-.event-pink {
-  background-color: var(--color-event-pink);
-  color: #fff;
-  box-shadow: 0 4px 14px rgba(231, 169, 245, 0.4);
-}
-.event-green {
-  background-color: var(--color-event-green);
-  color: #fff;
-  box-shadow: 0 4px 14px rgba(163, 229, 150, 0.4);
-}
-.event-blue {
-  background-color: var(--color-event-blue);
-  color: #fff;
-  box-shadow: 0 4px 14px rgba(107, 189, 235, 0.4);
-}
-
 /* ─── ApplicationCard glassmorphism ─── */
 .bg-applicationcard {
   border-radius: 25px;
@@ -233,19 +206,6 @@ body {
 }
 .bg-event-blue {
   flex-direction: column;
-}
-
-/* Event time text */
-.event-pink .time,
-.event-green .time,
-.event-blue .time {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 13px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 4px;
 }
 
 /* ═══════════════════════════════════════════════
@@ -569,6 +529,12 @@ body {
     flex-direction: row;
     gap: 0.75rem;
   }
+  /* Calendar + interviews share the row; without this both are w-full (200%)
+     and the interviews content overflows and gets clipped on the right. */
+  .calendar-col > * {
+    flex: 1 1 0;
+    min-width: 0;
+  }
   .schedule-panel {
     min-height: 300px;
   }
@@ -634,19 +600,23 @@ body {
     justify-content: center;
   }
 
-  /* Root container: allow natural scroll on mobile */
+  /* Root container: allow natural vertical scroll, never horizontal */
   .app-shell {
     height: auto !important;
     min-height: 100dvh;
-    overflow: visible !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
   }
 
-  /* Main content: full width, adjusted padding */
+  /* Main content: full width, adjusted padding.
+     min-width:0 lets the flex child shrink to the viewport instead of
+     being pushed wider by its content (caused ~11px horizontal scroll). */
   .main-content {
     padding: 1rem;
     padding-top: 1.25rem;
     height: auto;
     min-height: 0;
+    min-width: 0;
   }
 
   /* Dashboard grid: single column, natural flow */
@@ -700,11 +670,5 @@ body {
     height: auto;
     padding: 1rem;
     overflow: visible;
-  }
-
-  /* Event blocks: fit mobile width */
-  .event-block {
-    left: 70px;
-    width: calc(100% - 80px);
   }
 }
