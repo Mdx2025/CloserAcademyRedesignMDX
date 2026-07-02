@@ -212,6 +212,44 @@ body {
    RESPONSIVE — desktop-first from 1920 base
    ═══════════════════════════════════════════════ */
 
+/* ═══════════════════════════════════════════════
+   LARGE SCREENS (>1920) — scale the 1920 base UP
+   ───────────────────────────────────────────────
+   The dashboard is a single-viewport 1920×1080 canvas. Above 1920 it used to
+   stay 1920-sized and just spread thin (tiny UI lost in empty space on QHD/4K).
+   These tiers zoom the whole design proportionally so it stays "one screen,
+   bigger". `zoom` scales everything uniformly (px + rem + images); `h-dvh`
+   double-applies under zoom, so `.app-shell` height is divided by the same
+   factor to keep an exact one-viewport fit (verified 0 overflow both axes).
+   Each tier is gated on BOTH min-width and min-height so ultrawide/short
+   screens (21:9) fall back to the untouched 1920 base instead of clipping.
+   1920 and below are never affected.
+   ═══════════════════════════════════════════════ */
+@media (min-width: 2240px) and (min-height: 1230px) {
+  html { zoom: 1.1667; }
+  .app-shell { height: calc(100dvh / 1.1667); }
+}
+@media (min-width: 2560px) and (min-height: 1400px) {
+  html { zoom: 1.3333; }
+  .app-shell { height: calc(100dvh / 1.3333); }
+}
+@media (min-width: 2880px) and (min-height: 1580px) {
+  html { zoom: 1.5; }
+  .app-shell { height: calc(100dvh / 1.5); }
+}
+@media (min-width: 3200px) and (min-height: 1760px) {
+  html { zoom: 1.6667; }
+  .app-shell { height: calc(100dvh / 1.6667); }
+}
+@media (min-width: 3520px) and (min-height: 1930px) {
+  html { zoom: 1.8333; }
+  .app-shell { height: calc(100dvh / 1.8333); }
+}
+@media (min-width: 3840px) and (min-height: 2100px) {
+  html { zoom: 2; }
+  .app-shell { height: calc(100dvh / 2); }
+}
+
 /* ── ≤1800px: first compaction tier — covers the 1537–1919 gap where the
    1920-base fixed columns (sidebar + apps-panel + calendar-col) overflowed
    ~100px horizontally on 1680-class laptops. Narrower tiers below still win. ── */

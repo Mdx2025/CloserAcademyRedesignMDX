@@ -2,6 +2,21 @@
 
 ## 2026-07-02
 
+### Added — large-screen scale-up (>1920)
+
+Above 1920 the single-viewport 1920×1080 canvas stayed 1920-sized and spread thin
+(tiny UI lost in empty space on QHD/4K). Added gated `zoom` tiers that scale the
+whole design up proportionally so it stays "one screen, bigger", with 1920 as the
+untouched baseline.
+
+- `app.css`: min-width **and** min-height gated tiers at 2240/2560/2880/3200/3520/3840
+  (`zoom` 1.167→2.0). `zoom` scales px + rem + images uniformly; `.app-shell` height
+  is divided by the same factor to cancel the `h-dvh` double-apply → exact one-viewport
+  fit (verified 0 overflow both axes at every tier).
+- Double gate (width + height) makes ultrawide/short 21:9 screens fall back to the
+  untouched 1920 base instead of clipping (e.g. 3440×1440 → 1.333 tier; 2560×1080 → base).
+- ≤1920, tablet and mobile are never affected.
+
 ### Fixed — responsive QA pass (Playwright, 16 device/resolution combos)
 
 Verified across desktop/laptop/tablet/mobile top-4 resolutions each. Desktop and
